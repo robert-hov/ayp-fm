@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AYPVip</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"> -->
+</head>
+<body class="body">
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v10.0" nonce="1h6LzOni"></script>
+
+    <svg class="hidden">
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.379 37.569" id="download-btn">
+          <path d="M31.297 12.076h-6.8a1.342 1.342 0 100 2.684h6.8a1.351 1.351 0 011.361 1.342v17.443a1.351 1.351 0 01-1.361 1.342H4.082a1.351 1.351 0 01-1.361-1.342V16.101a1.351 1.351 0 011.361-1.342h6.8a1.342 1.342 0 100-2.683h-6.8A4.054 4.054 0 000 16.101v17.443a4.054 4.054 0 004.082 4.025h27.215a4.054 4.054 0 004.082-4.025V16.101a4.054 4.054 0 00-4.082-4.025z" stroke="none"></path>
+          <path d="M25.425 19.178a1.375 1.375 0 00-1.891 0L19.05 23.6V1.342a1.361 1.361 0 00-2.722 0V23.6l-4.481-4.418a1.374 1.374 0 00-1.924.033 1.328 1.328 0 000 1.864l6.8 6.709a1.374 1.374 0 001.924 0l6.8-6.709a1.328 1.328 0 00-.022-1.901z" stroke="none"></path>
+          <path d="M25.425 19.178a1.375 1.375 0 00-1.891 0L19.05 23.6V1.342a1.361 1.361 0 00-2.722 0V23.6l-4.481-4.418a1.374 1.374 0 00-1.924.033 1.328 1.328 0 000 1.864l6.8 6.709a1.374 1.374 0 001.924 0l6.8-6.709a1.328 1.328 0 00-.022-1.901z" stroke="none"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21.003" id="menu-fb">
+            <path d="M9.423.054A10.66 10.66 0 00.702 6.723a10.785 10.785 0 00-.664 4.65 10.337 10.337 0 003.032 6.5 12.158 12.158 0 001.322 1.158 10.476 10.476 0 009.931 1.243 10.835 10.835 0 005.584-5.1 10.707 10.707 0 001.052-5.558 10.311 10.311 0 00-3.025-6.485A10.179 10.179 0 0012.903.29a10.126 10.126 0 00-3.48-.236zm4.1 5.347v1.276l-.789.026c-.789.02-.789.02-.954.217-.138.171-.158.257-.145.625l.013.428h1.874v2.532h-1.907l-.013 3.17-.02 3.177-1.329.02-1.335.013v-6.38H7.471V7.973l.717.02.717.026.026-1.013a3.2 3.2 0 01.178-1.335 2.568 2.568 0 011.717-1.44 9.054 9.054 0 011.565-.1l1.131-.007z" stroke="none"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" id="menu-ig">
+            <path d="M305 256c0 27.063-21.938 49-49 49s-49-21.938-49-49 21.938-49 49-49 49 21.938 49 49zm0 0"></path>
+            <path d="M370.594 169.305a45.546 45.546 0 00-10.996-16.903 45.514 45.514 0 00-16.903-10.996c-5.18-2.011-12.96-4.406-27.293-5.058-15.504-.707-20.152-.86-59.402-.86-39.254 0-43.902.149-59.402.856-14.332.656-22.118 3.05-27.293 5.062a45.483 45.483 0 00-16.903 10.996 45.572 45.572 0 00-11 16.903c-2.011 5.18-4.406 12.965-5.058 27.297-.707 15.5-.86 20.148-.86 59.402 0 39.25.153 43.898.86 59.402.652 14.332 3.047 22.114 5.058 27.293a45.563 45.563 0 0010.996 16.903 45.514 45.514 0 0016.903 10.996c5.18 2.015 12.965 4.41 27.297 5.062 15.5.707 20.144.856 59.398.856 39.258 0 43.906-.149 59.402-.856 14.332-.652 22.118-3.047 27.297-5.062a48.68 48.68 0 0027.899-27.899c2.011-5.18 4.406-12.96 5.062-27.293.707-15.504.856-20.152.856-59.402 0-39.254-.149-43.902-.856-59.402-.652-14.332-3.047-22.118-5.062-27.297zM256 331.485c-41.691 0-75.488-33.794-75.488-75.485s33.797-75.484 75.488-75.484c41.688 0 75.484 33.793 75.484 75.484S297.688 331.484 256 331.484zm78.469-136.313c-9.742 0-17.64-7.899-17.64-17.64s7.898-17.641 17.64-17.641 17.64 7.898 17.64 17.64c-.004 9.742-7.898 17.64-17.64 17.64zm0 0"></path>
+            <path d="M256 0C114.637 0 0 114.637 0 256s114.637 256 256 256 256-114.637 256-256S397.363 0 256 0zm146.113 316.605c-.71 15.649-3.199 26.333-6.832 35.684a75.164 75.164 0 01-42.992 42.992c-9.348 3.633-20.035 6.117-35.68 6.832-15.675.715-20.683.887-60.605.887-39.926 0-44.93-.172-60.61-.887-15.644-.715-26.331-3.199-35.68-6.832a72.018 72.018 0 01-26.038-16.957 72.044 72.044 0 01-16.953-26.035c-3.633-9.348-6.121-20.035-6.832-35.68-.723-15.68-.891-20.687-.891-60.609s.168-44.93.887-60.605c.71-15.649 3.195-26.332 6.828-35.684a72.013 72.013 0 0116.96-26.035 72.003 72.003 0 0126.036-16.957c9.352-3.633 20.035-6.117 35.684-6.832C211.07 109.172 216.078 109 256 109s44.93.172 60.605.89c15.649.712 26.332 3.196 35.684 6.825a72.061 72.061 0 0126.04 16.96 72.027 72.027 0 0116.952 26.036c3.637 9.352 6.121 20.035 6.836 35.684.715 15.675.883 20.683.883 60.605s-.168 44.93-.887 60.605zm0 0"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.667 11.75" id="menu-mail">
+            <path d="M.302.838c2.157 1.6 5.943 4.419 7.056 5.3a.723.723 0 00.951 0c1.114-.879 4.9-3.7 7.057-5.3a.263.263 0 00.046-.4A1.373 1.373 0 0014.383 0h-13.1A1.373 1.373 0 00.255.442a.263.263 0 00.047.396z" stroke="none"></path>
+            <path d="M15.477 1.711a.319.319 0 00-.348.048c-2.385 2.069-5.428 4.72-6.385 5.6a1.3 1.3 0 01-1.822 0c-1.021-.941-4.438-3.914-6.385-5.6a.321.321 0 00-.348-.048.335.335 0 00-.189.3v8.4a1.322 1.322 0 001.306 1.336h13.055a1.322 1.322 0 001.306-1.336v-8.4a.334.334 0 00-.19-.3z" stroke="none"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.667 15.667" id="menu-tel">
+            <path d="M15.417 12.228a3.558 3.558 0 01-.108.759 4.28 4.28 0 01-.226.738 2.888 2.888 0 01-1.314 1.142 3.993 3.993 0 01-2.569.512 4.658 4.658 0 01-.619-.135q-.345-.1-.512-.156t-.6-.221q-.431-.162-.528-.194a9.756 9.756 0 01-1.885-.894 18.093 18.093 0 01-5.17-5.17 9.757 9.757 0 01-.894-1.885q-.032-.1-.194-.528t-.221-.6q-.059-.167-.156-.512a4.662 4.662 0 01-.135-.619 3.994 3.994 0 01.512-2.569A2.888 2.888 0 011.94.582a4.278 4.278 0 01.738-.226 3.556 3.556 0 01.759-.108.6.6 0 01.226.032q.194.065.571.819.119.2.323.582t.377.684q.172.307.334.576.032.043.188.269a3.012 3.012 0 01.232.382.7.7 0 01.075.307.894.894 0 01-.307.539 5.249 5.249 0 01-.668.592 6.487 6.487 0 00-.668.571.821.821 0 00-.307.5.728.728 0 00.054.242 2.355 2.355 0 00.092.221q.038.075.151.258t.124.2a10.676 10.676 0 004.406 4.406q.021.011.2.124t.258.151a2.356 2.356 0 00.221.092.727.727 0 00.242.054.821.821 0 00.5-.307 6.485 6.485 0 00.571-.668 5.252 5.252 0 01.592-.668.894.894 0 01.539-.307.7.7 0 01.307.075 3.013 3.013 0 01.382.232q.226.156.269.189.269.162.576.334t.684.377q.377.2.582.323.754.377.819.571a.6.6 0 01.035.228z" stroke-width=".5"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21" id="menu-twitter">
+            <path d="M10.5 0A10.5 10.5 0 1021 10.5 10.5 10.5 0 0010.5 0zm4.794 8.187q.007.155.007.311a6.811 6.811 0 01-6.857 6.857 6.822 6.822 0 01-3.694-1.082 4.9 4.9 0 00.575.033 4.836 4.836 0 002.993-1.032A2.413 2.413 0 016.066 11.6a2.4 2.4 0 001.089-.041A2.411 2.411 0 015.221 9.2v-.031a2.393 2.393 0 001.092.3 2.412 2.412 0 01-.746-3.219 6.842 6.842 0 004.968 2.518 2.411 2.411 0 014.107-2.2 4.834 4.834 0 001.53-.585 2.419 2.419 0 01-1.06 1.333 4.807 4.807 0 001.384-.38 4.9 4.9 0 01-1.2 1.248zm0 0" stroke="none"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35.785 35.286" id="play-btn">
+            <path d="M17.893 0A17.789 17.789 0 000 17.643a17.789 17.789 0 0017.893 17.643 17.789 17.789 0 0017.892-17.643A17.789 17.789 0 0017.893 0zm7.113 18.261l-10.438 6.616a.754.754 0 01-.76.027.733.733 0 01-.389-.645V11.027a.733.733 0 01.389-.645.753.753 0 01.76.027l10.437 6.616a.729.729 0 010 1.236z" stroke="none"></path>
+        </symbol>
+        <!-- fill stroke -->
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.698 19.698" id="search">
+            <path d="M8.258.35a7.908 7.908 0 105 14.025l4.721 4.721a.791.791 0 101.118-1.118l-4.721-4.721A7.9 7.9 0 008.258.35zm0 1.582a6.326 6.326 0 11-6.326 6.326 6.314 6.314 0 016.326-6.326z" stroke-width=".7"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.123 17.123" id="slider-play">
+            <path d="M0 0v17.123h17.123V0zm14.788 14.788H2.335V2.335h12.453zM5.448 4.67v7.783l7-3.892z" stroke="none"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.996 28.001" id="volume">
+            <g stroke="none">
+                <path d="M17.116 1.641v1.645l.15.042c.081.021.368.126.637.231a10.93 10.93 0 015.023 4.036 11.352 11.352 0 011.781 4.375 9.751 9.751 0 01.161 2.03 9.751 9.751 0 01-.161 2.03A11.187 11.187 0 0118.879 24a11.862 11.862 0 01-1.614.672l-.15.042V28l.1-.021a14.214 14.214 0 009.773-8.624 15.519 15.519 0 00.945-3.9 15.476 15.476 0 00-.263-4.55A14.341 14.341 0 0018.892.548a17.323 17.323 0 00-1.677-.525L17.116 0zm-4.935 1.463L8.3 7.168 6.217 9.345H0v9.311h6.213l3.887 4.062 3.885 4.064.01-6.391V7.608l-.01-6.391z"></path>
+                <path d="M17.116 13.969v6.444l.238-.13a7.1 7.1 0 003.581-5.268 10.2 10.2 0 00-.014-2.117 7.334 7.334 0 00-2.805-4.742 7.068 7.068 0 00-.885-.574l-.115-.06z"></path>
+            </g>
+        </symbol>
+      </svg>
+    
+    <header class="header">
+        <div class="nav__container">
+            <div class="container nav__inner">
+                <a href="index.html" class="logo__container">
+                    <div class="img-container">
+                        <img src="img/logo.png" alt="ayp logo" class="nav__logo">
+                    </div>    
+                </a>
+                <div class="nav__container-inner">
+                    <ul class="nav__top">
+                        <li class="nav__top-item nav__top-left">
+                            <a href="#" class="nav__top-img-container --tel">
+                                <div class="img-container">
+                                    <svg class="icon">
+                                        <use xlink:href="#menu-tel"></use>
+                                    </svg>              
+                                </div>
+                            </a>
+                            <a class="nav__top-a" href="#">01 43 53 19 90</a>
+                            </li>
+                        <li class="nav__top-item nav__top-icons">
+                            <a class="nav__top-a --follow" href="#">Follow Us</a>
+                            <a href="#" class="nav__top-img-container">
+                                <div class="img-container">
+                                    <svg class="icon">
+                                        <use xlink:href="#menu-fb"></use>
+                                    </svg>                        
+                                </div>
+                            </a>
+                            <a href="#" class="nav__top-img-container">
+                                <div class="img-container">
+                                    <svg class="icon">
+                                        <use xlink:href="#menu-twitter"></use>
+                                    </svg>                  
+                                </div>
+                            </a>
+                            <a href="#" class="nav__top-img-container">
+                                <div class="img-container">
+                                    <svg class="icon">
+                                        <use xlink:href="#menu-ig"></use>
+                                    </svg>                                                            
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="nav">
+                        <li class="nav__item">
+                            <a href="index.html" class="nav__a">
+                                Accueil
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="programms.html" class="nav__a">
+                                Programmes
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="about.html" class="nav__a">
+                                Qui Sommes Nous
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="#" class="nav__a">
+                                Publicité
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="vip.html" class="nav__a">
+                                Club VIP
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a href="contact.html" class="nav__a">
+                                Écrivez-Nous
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <button class="nav__burger-btn-container">
+                    <input type="checkbox" class="nav__btn-check" id='nav__check'>
+                    <label for="nav__check"  class="nav__btn-label">
+                        <p class="nav__btn-line"></p>
+                        <p class="nav__btn-line"></p>
+                        <p class="nav__btn-line"></p>
+                    </label>
+                </button>
+            </div>
+        </div>
+        <div class="header__info header__info_custom">
+            <div class="header__info-inner">
+                <h2 class="header__sub text-center container">club vip</h2>
+            </div>
+        </div>
+    </header>
+    <!-- <div class="audio__container">
+        <img src="img/audio/Group 164.png" alt="audio image" class="audio__img">
+    </div> -->
+    <div class="vip__container container">
+        <div class="title-container --full">
+            <h3 class="box-title box-title">Rejoignez Notre Club VIP</h3>
+        </div>
+        <div class="vip__content">
+            <div class="vip__info">
+                <p><strong>Bienvenue dans l'espace VIP d’Ayp Fm.</strong></p>
+                <br>
+                <p>En vous inscrivant à l’espace VIP, vous aurez accès à de nouvelles fonctionnalités, services et avantages proposés par Ayp Fm.</p>
+                <br>
+                <p>Vous aurez dés à présent la possibilité de télécharger dans votre ordinateur les émissions d’Ayp Fm stockées en Archives, de passer commandes de dédicaces qui seront diffusées lors de nos émissions « Dédicaces » du lundi et du vendredi, mais également d’être tenu informés des initiatives prises par Ayp Fm (émissions exceptionnelles, manifestations publiques, spectacles ...).</p>
+                <br>
+                <p>Le site d’Ayp Fm vous tiendra régulièrement informés des nouveaux avantages consentis aux membres de l’espace VIP.</p>
+            </div>
+            <div class="vip__forms">
+                <div class="vip__box" id="first">
+                    <h3 class="vip__box-title">CONNEXION</h3>
+                    <div class="vip__box-sub">Merci de vous identifier :</div>
+                    <form action="" class="vip__reg-form">
+                        <div class="vip__reg-row">
+                            <label class="vip__reg-label">
+                                <span class="vip__reg-label-text">
+                                    Identifiant (email) :
+                                </span>
+                                <input type="email" class="vip__reg-input">
+                            </label>    
+                        </div>
+                        <div class="vip__reg-row">
+                            <label class="vip__reg-label">
+                                <span class="vip__reg-label-text">
+                                    Mot de passe :
+                                    <span class="vip__reg-label-text-inner">
+                                        Mot de passe oublié ?
+                                    </span>
+                                </span>
+                                <input type="password" class="vip__reg-input">
+                            </label>
+                        </div>
+                        <div class="vip__btn-row">
+                            <a href="#" class="vip__btn">Créer Un Compte</a>
+                        </div>
+                    </form>
+                </div>
+                <div class="vip__box">
+                    <h3 class="vip__box-title">INSCRIPTION</h3>
+                    <div class="vip__box-sub">Inscrivez vous pour rejoindre le club VIP de radio AYP et profiter de ces nombreux avantages</div>
+                    <div class="vip__btn-row" id="center">
+                        <a href="#" class="vip__btn">INSCRIPTION</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container footer__container">
+            <a href="#" class="footer__img-contianer footer__nav">
+                <img src="img/footer/Group 424.svg" alt="footer logo" class="footer__logo">
+            </a>
+            <ul class="footer__nav">
+                <li class="footer__item --title">
+                    <h3 class="footer__title">Lien</h3>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">Accueil</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">Programmes</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">Qui Sommes Nous</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">Publicité</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">Club VIP</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">écrivez-Nous</a>
+                </li>
+            </ul>
+            <ul class="footer__nav">
+                <li class="footer__item --title">
+                    <h3 class="footer__title">Contacts</h3>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">
+                        <div class="footer__item-icon footer__item-icon_tel">
+                            <div class="img-container">
+                                <svg class="icon">
+                                    <use xlink:href="#menu-tel"></use>
+                                </svg>  
+                            </div>
+                        </div>
+                        01 43 53 19 90
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">
+                        <div class="footer__item-icon footer__item-icon_mail">
+                            <div class="img-container">
+                                <svg class="icon">
+                                    <use xlink:href="#menu-mail"></use>
+                                </svg>  
+                            </div>
+                        </div>
+                         info@radio-aypfm.com
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link --icon">
+                        <div class="footer__icon-container">
+                            <div class="footer__item-icon footer__item-icon_social">
+                                <div class="img-container">
+                                    <svg class="icon">
+                                        <use xlink:href="#menu-fb"></use>
+                                    </svg>  
+                                </div>
+                            </div>
+                            <div class="footer__item-icon footer__item-icon_social">
+                                <div class="img-container">
+                                    <svg class="icon">
+                                        <use xlink:href="#menu-twitter"></use>
+                                    </svg>  
+                                </div>
+                            </div>
+                            <div class="footer__item-icon footer__item-icon_social">
+                                <div class="img-container">
+                                    <svg class="icon">
+                                        <use xlink:href="#menu-ig"></use>
+                                    </svg>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__icon-text">
+                            Follow Us
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="footer__nav ">
+                <li class="footer__item --title">
+                    <h3 class="footer__title">Devenez Mobile</h3>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__item-link">
+                        <img src="img/footer/google-play-badge.png" alt="" class="footer__smm-img">
+                    </a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__item-link">
+                        <img src="img/footer/download-on-the-app-store-apple-2.png" alt="" class="footer__smm-img">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <div class="sub-footer">
+        <div class="sub-footer__item"></div>
+        <div class="sub-footer__item">Droits de reproduction et de diffusion réservès © AYP FM 2020</div>
+        <div class="sub-footer__item">site créé par web-isi</div>
+    </div>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

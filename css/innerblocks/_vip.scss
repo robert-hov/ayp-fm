@@ -1,0 +1,279 @@
+.vip__container {
+    padding: 5.875rem 0 6.375rem;
+}
+
+.vip__content {
+    display: flex;
+    margin-top: 3.125rem;
+}
+
+.vip__info {
+    width: 46.2%;
+    margin-right: auto;
+}
+
+.vip__info strong {
+    color: var(--ayp-blue-light);
+}
+
+.vip__info p {
+    font-size: 1.25em;
+    line-height: 2rem;
+}
+
+.vip__forms {
+    width: 32%;
+    margin-right: 8.25rem;
+}
+
+.vip__box {
+    padding: 0.875rem 2.25rem 2rem 1.5625rem;
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.21); 
+    box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.21);
+}
+
+#first.vip__box {
+    margin-bottom: 1.6875rem;
+    padding: 0.875rem 2.25rem 1.3125rem 1.5625rem;
+}
+
+.vip__box-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 2rem;
+
+    color: #FF5E00;
+}
+
+.vip__box-sub {
+    font-size: 1.093rem;
+    font-weight: bold;
+    line-height: 1.75rem;
+
+    color: #7B7B7B;
+}
+
+.vip__box-sub.vip__box-sub-req {
+    margin: 0.9375rem 0;
+}
+
+.vip__reg-form {
+    margin-top: 0.9375rem;
+}
+
+.vip__btn-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.vip__btn-row#center {
+    justify-content: center;
+}
+
+.vip__btn {
+    display: inline-block;
+
+    font-size: 0.875rem;
+    font-weight: bold;
+    line-height: 1.375rem;
+
+    padding: 0.75rem 1.75rem;
+    background-color: var(--ayp-orange-2);
+    color: var(--ayp-white);
+
+    margin-top: 1rem;
+}
+
+.vip__reg-group {
+    margin-bottom: 1.125rem;
+}
+
+.vip__reg-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vip__reg-row.vip__radio-row {
+    justify-content: flex-start;
+}
+
+.vip__reg-row.vip__captcha-row {
+    justify-content: center;
+}
+
+.vip__reg-row.vip__reg-check-row {
+    align-items: flex-start;
+}
+
+.vip__reg-row:first-child {
+    margin-bottom: 0.625rem;
+}
+
+.vip__reg-label {
+    font-size: 1.062rem;
+    font-weight: bold;
+    line-height: 1.687rem;
+
+    width: 42%;
+    padding-right: 1rem;
+
+    color: var(--ayp-blue-dark);
+}
+
+.vip__radio-row .vip__reg-label {
+    width: initial;
+}
+
+.vip__reg-check-label {
+    font-size: 0.9375rem;
+    font-weight: bold;
+    line-height: 1.437rem;
+
+    color: #7B7B7B;
+}
+
+.vip__reg-inner-label {
+    margin-right: 1.875em;
+}
+
+.vip__reg-input,
+.vip__reg-option {
+    width: 58%;
+    border: 1px solid #707070;
+    outline: none;
+    border-radius: 0;
+    background-color: var(--ayp-white);
+    box-shadow: none;
+    font-size: 1.0625rem;
+    line-height: 1.5882rem;
+    padding: 0 0.6em;
+}
+
+.vip__reg-row [type="radio"] {
+    margin-right: 0.5rem;
+}
+
+#vip__reg-check {
+    margin-right: 1.125rem;
+}
+
+.vip__red {
+    color: #B50500;
+}
+
+#vip__mb-10 {
+    margin-bottom: 0.625rem;
+}
+
+#vip__mt-10 {
+    margin-top: 0.625rem;
+}
+
+@media (max-width: 900px) {
+    .vip__info {
+        width: 58%;
+    }
+
+    .vip__forms {
+        width: 40%;
+    }
+
+    .vip__info p {
+        font-size: 1.8rem;
+    }
+
+    .vip__box-title {
+        font-size: 1.8rem;
+    }
+
+    .vip__box-sub {
+        font-size: 1.5rem;
+    }
+
+    .vip__reg-label {
+        font-size: 1.5rem;
+    }
+
+    .vip__reg-input {
+        font-size: 1.5rem;
+    }
+
+    .vip__btn {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 667px) {
+    .vip__content {
+        flex-direction: column;
+    }
+
+    .vip__info {
+        width: 100%;
+    }
+
+    .vip__forms {
+        width: 52%;
+        margin: 0 auto;
+        margin-top: 3rem;
+    }
+
+    #first.vip__box {
+        margin-bottom: 4.5rem;
+    }
+
+    .vip__box-title {
+        font-size: 2.3rem;
+    }
+
+    .vip__info p {
+        font-size: 2.3rem;
+    }
+
+    .vip__box-sub {
+        font-size: 2rem;
+    }
+
+    .vip__reg-label {
+        font-size: 2rem;
+    }
+
+    .vip__reg-input {
+        font-size: 2rem;
+    }
+
+    .vip__btn {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 414px) {
+    .vip__forms {
+        width: 70%;
+    }
+
+    .vip__info p {
+        font-size: 3rem;
+    }
+
+    .vip__box-title {
+        font-size: 3rem;
+    }
+
+    .vip__box-sub {
+        font-size: 2.8rem;
+    }
+
+    .vip__reg-label {
+        font-size: 2.8rem;
+    }
+
+    .vip__reg-input {
+        font-size: 2.8rem;
+    }
+
+    .vip__btn {
+        font-size: 2.3rem;
+    }
+}

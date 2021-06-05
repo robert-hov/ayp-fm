@@ -1,0 +1,129 @@
+.podcasts__container {
+    padding-bottom: 3.75rem;
+}
+
+.podcasts__title-container {
+    width: 74.68%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.podcasts__title {
+    font-weight: 400;
+    line-height: 2.687rem;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.podcasts__sub {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.562rem;
+    margin-right: 4.25rem;
+}
+
+.swiper-container.podcasts__swiper {
+    padding: 1.875rem 0;
+}
+
+.podcasts__date {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.562rem;
+    color: var(--ayp-blue-light);
+}
+
+.podcasts__swiper-title {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: var(--ayp-black-2);
+}
+
+.podcasts__swiper-sub {
+    font-size: .875rem;
+    font-weight: 400;
+    line-height: 1.375rem;
+    color: var(--ayp-black-2);
+}
+
+.podcasts__pagination-container {
+    margin-top: 3.125rem;
+    width: 74.68%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide.podcasts.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide + .swiper-slide {
+    opacity: 50%;
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .podcasts__title-container {
+        width: 100%;
+    }
+
+    .podcasts__pagination-container {
+        width: 100%;
+    }
+    
+    .podcasts__item-a {
+        font-size: 1.6rem;
+    }
+
+    .podcasts__sub {
+        font-size: 1.6rem;
+    }
+
+    .podcasts__date {
+        font-size: 2.1333rem;
+    }
+
+    .podcasts__swiper-title {
+        font-size: 1.8666rem;
+    }
+
+    .podcasts__swiper-sub {
+        font-size: 1.8666rem;
+    }
+}
+
+@media (max-width: 667px) {
+    .podcasts__sub {
+        font-size: 2.9090rem;
+        margin-right: 1.25rem;
+    }
+
+    .podcasts__date {
+        font-size: 2.9090rem;
+    }
+
+    .podcasts__swiper-title {
+        font-size: 2.5454rem;
+    }
+
+    .podcasts__swiper-sub {
+        font-size: 2.5454rem;
+    }
+}
+
+@media (max-width: 414px) {
+    .podcasts__sub {
+        font-size: 4.285rem;
+    }
+
+    .podcasts__date {
+        font-size: 4.285rem;
+    }
+
+    .podcasts__swiper-title {
+        font-size: 3.428rem;
+    }
+
+    .podcasts__swiper-sub {
+        font-size: 3.428rem;
+    }
+}

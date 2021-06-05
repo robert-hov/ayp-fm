@@ -1,0 +1,19 @@
+.audio__container {
+    background-color: var(--ayp-blue-dark);
+
+    display: flex;
+    // display: none;
+    justify-content: center;
+    padding: 8px 0;
+
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    z-index: 999;
+}
+
+.audio__img {
+    width: 55%;
+}

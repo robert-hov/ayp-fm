@@ -1,0 +1,45 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ayp-font);
+    font-size: 0.833vw;
+    max-height: 100%;
+}
+
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    touch-action: pan-y;
+}
+
+a {
+    text-decoration: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import "_var.scss";
+@import "_total.scss";
+@import "_swiper.scss";
+@import "_swiper.min.scss";
+@import "homeblocks/_nav.scss";
+@import "homeblocks/_header.scss";
+@import "homeblocks/_audio-popup.scss";
+@import "homeblocks/_search.scss";
+@import "homeblocks/_shows.scss";
+@import "homeblocks/_podcasts.scss";
+@import "homeblocks/_clips.scss";
+@import "homeblocks/_fm.scss";
+@import "homeblocks/_advertisers.scss";
+@import "homeblocks/_network.scss";
+@import "homeblocks/_footer.scss";
+@import "innerblocks/_programms.scss";
+@import "innerblocks/_achives.scss";
+@import "innerblocks/_about.scss";
+@import "innerblocks/_vip";
+@import "innerblocks/contact";

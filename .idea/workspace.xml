@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a6c283c1-1c89-44b2-8d8c-d26a00427b60" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/AYP.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AYP layouts/AYP-FM-v3.xd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/achives.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/_swiper.min.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/_swiper.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/_total.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/_var.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_advertisers.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_audio-popup.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_clips.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_fm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_nav.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_network.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_podcasts.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_search.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/homeblocks/_shows.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/innerblocks/_achives.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/innerblocks/_programms.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/Oxygen/OFL.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/Oxygen/Oxygen-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/Oxygen/Oxygen-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/Oxygen/Oxygen-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/achives/Group 2008.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/achives/NoPath - Copie.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/achives/Path 531.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/advertisers/NoPath - Copie (19).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/advertisers/NoPath - Copie (20).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/advertisers/NoPath - Copie (21).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/advertisers/pu_annonce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/audio/Group 164.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/audio/Iveta-Mukuchyan-New-York-Fashion-Week-Armenia-Eurovision-1-1 (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/clips/2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/clips/3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/clips/4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/clips/5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/clips/Group 454.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/clips/svgexport-25.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/fm/Group 454.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/fm/Group 455.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/fm/Group 457.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/footer/Group 424.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/footer/Group 424.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/footer/Group 424@2x.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/footer/Path 34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/footer/download-on-the-app-store-apple-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/footer/google-play-badge.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/header/001-facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/header/002-twitter.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/header/003-instagram.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/header/1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/header/1@2x.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nav/Group 324.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nav/facebook.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nav/instagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nav/phone.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/nav/twitter.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/search/icons8-search.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/search/sddefault.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shows/Path 51.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shows/brain-anterior.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shows/sddefault (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shows/sddefault (2).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shows/sddefault (3).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/shows/sddefault.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/swiper-bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/swiper.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/programms.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1tTraCriwbkjcIvMREPQmA184Uv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a6c283c1-1c89-44b2-8d8c-d26a00427b60" name="Default Changelist" comment="" />
+      <created>1622803985599</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622803985599</updated>
+      <workItem from="1622803985968" duration="32000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
