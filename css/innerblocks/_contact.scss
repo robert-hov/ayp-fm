@@ -17,7 +17,9 @@
 
 .contact__card-box {
     width: 24.841%;
-    padding: 2.437rem 2.218rem 1.062rem;
+    min-width: 250px;
+    font-size: clamp(13px, 1rem, 1rem);
+    padding: 2.437em 2.218em 1.062em;
 
     background-color: var(--ayp-blue-dark);
 }
@@ -38,9 +40,9 @@
 .contact__card-text {
     color: var(--ayp-white);
 
-    font-size: 1.062rem;
+    font-size: clamp(14px, 1.062rem, 1.062rem);
     font-weight: 400;
-    line-height: 1.687rem;
+    line-height: 1.588em;
     text-align: center;
 }
 
@@ -74,9 +76,10 @@
 .contact__form-container {
     display: flex;
     justify-content: center;
+    font-size: clamp(12px, 1rem, 1rem);
 
     width: 64.797%;
-    margin: 2.25rem auto 0;
+    margin: 2.25em auto 9.218em;
 }
 
 .contact__form {
@@ -90,19 +93,20 @@
 }
 
 .contact__form-title {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4em;
 
     color: #FF5E00;
 
-    font-size: 1.25rem;
+    font-size: clamp(14px, 1.25rem, 1.25rem);
     font-weight: bold;
-    line-height: 2rem;
+    line-height: 1.6em;
 }
 
 .contact__form-row {
+    font-size: 16px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.375rem;
+    margin-bottom: 1.375em;
 }
 
 .contact__block {
@@ -141,10 +145,15 @@
 
 
 .contact__input-radio {
+    font-size: clamp(10px, 1rem , 1rem);
     opacity: 0;
-    margin-right: 0.5rem;
-    height: 1.238rem;
-    width: 1.238rem;
+    margin-right: 0.5em;
+    height: 1.238em;
+    width: 1.238em;
+}
+
+.contact__custom-radio-container {
+    display: flex;
 }
 
 .contact__input-radio:checked ~ .custom-radio .custom-radio-inner {
@@ -153,6 +162,8 @@
 }
 
 .custom-radio {
+    font-size: clamp(10px, 1rem , 1rem);
+    
     position: absolute;
     left:0;
     top: 0;
@@ -160,8 +171,8 @@
     display: block;
     transition: 300ms;
 
-    height: 1.238rem;
-    width: 1.238rem;
+    height: 1.238em;
+    width: 1.238em;
     margin-top: auto;
     margin-bottom: auto;
     border-radius: 50%;
@@ -189,9 +200,9 @@
 
     color: var(--ayp-blue-dark);
 
-    font-size: 1.062rem;
+    font-size: clamp(12px, 1.062rem, 1.062rem);
     font-weight: bold;
-    line-height: 1.687rem;
+    line-height: 1.588em;
 }
 
 .contact__label_message .contact__label-text {
@@ -199,11 +210,11 @@
 }
 
 .contact__label-text_big {
-    min-width: 5.125rem;
+    min-width: 4.823em;
 }
 
 .contact__label-text_small {
-    min-width: 4.687rem;
+    min-width: 4.411em;
 }
 
 .contact__label_message {
@@ -248,9 +259,9 @@
 .contact__desc {
     color: #7B7B7B;
 
-    font-size: 0.937rem;
+    font-size: clamp(12px, 0.937rem, 0.937rem);
     font-weight: bold;
-    line-height: 1.437rem;
+    line-height: 1.533em;
 }
 
 .contact__desc_red {
@@ -259,21 +270,84 @@
 
 .contact__form-captcha {
     margin: -2rem auto 0.95rem;
+    display: none;
 }
 
 .contact__form-btn {
     display: block;
 
     margin: 0 auto;
-    padding: 0.812rem 4.05rem;
+    padding: 1.125em 5.395em;
     border: none;
 
     background-color: #FF5E00;
     color: var(--ayp-white);
 
-    font-size: 0.75rem;
+    font-size: clamp(8px, 0.75rem, 0.75rem);
     font-weight: bold;
-    line-height: 1.187rem;
+    line-height: 1.583em;
     text-transform: uppercase;
     text-align: center;
+}
+
+@media (max-width: 900px) {
+    .contact__form-row {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .contact__label {
+        width: 100%;
+    }
+
+    .contact__label-radio {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact__label-text_big,
+    .contact__label-text_small {
+        min-width: 4.823em;
+    }
+
+    .contact__block.contact__block_half {
+        width: 100%;
+    }
+
+    .contact__input_mail {
+        margin-right: 0;
+    }
+
+    .contact__block {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 676px) {
+    .contact__map-container {
+        flex-direction: column;
+    }
+
+    .contact__card-box {
+        width: 100%;
+    }
+
+    .contact__card-logo-box {
+        width: 80%;
+        margin: 0 auto 2rem;
+    }
+
+    .contact__map-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 414px) {
+    .contact__label {
+        flex-direction: column;
+    }
+
+    .contact__label-text {
+        margin-bottom: .5rem;
+    }
 }

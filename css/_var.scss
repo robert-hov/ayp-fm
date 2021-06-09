@@ -1,19 +1,24 @@
 :root {
     --ayp-black: rgb(0,0,0);
+    --ayp-black--62: rgba(0,0,0,0.62);
     --ayp-black-2: rgb(41,41,41);
     --ayp-black-3: rgb(53,53,53);
+    --ayp-black-4: rgb(3,15,32);
 
     --ayp-white: rgb(255,255,255);
     --ayp-white--64: rgba(255,255,255,0.64);
 
     --ayp-gray-light: rgb(241,241,241);
+    --ayp-gray-light-2: rgb(200,200,200);
     --ayp-gray: rgb(242,242,242);
+    --ayp-gray-2: rgb(165,165,165);
     --ayp-gray-dark: rgb(123,123,123);
     --ayp-gray-dark-2: rgb(112,112,122);
     --ayp-gray-darker: rgb(85,85,85);
     --ayp-gray-darkest: rgb(53,53,53);
 
     --ayp-blue-light: rgb(30,115,190);
+    --ayp-blue-light--5: rgba(30,115,190,.5);
     --ayp-blue: rgb(13,86,148);
     --ayp-blue-dark: rgb(3,15,32);
     --ayp-blue-dark--06: rgba(3,15,32,0.06);

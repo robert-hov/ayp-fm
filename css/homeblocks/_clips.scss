@@ -32,8 +32,7 @@
 .clips__sub {
     font-size: 1rem;
     font-weight: 400;
-    line-height: 1.5625rem;
-    margin-right: 4.25rem;
+    line-height: 1.562em;
 }
 
 .clips__item-a {
@@ -58,9 +57,9 @@
 }
 
 .clips__swiper-title {
-    font-size: 1rem;
+    font-size: clamp(13px, 1rem, 1rem);
     font-weight: bold;
-    line-height: 1.562rem;
+    line-height: 1.562em;
     color: var(--ayp-blue-light);
     display: flex;
     align-items: center;
@@ -70,10 +69,16 @@
 
 .clips .clips__swiper-icon {
     position: relative;
-    width: 1.07rem;
-    height: 1.07rem;
+    width: 1.062rem;
+    min-width: 13px;
     display: block;
     margin-right: 0.625rem;
+}
+
+.clips .clips__swiper-icon::before {
+    content: '';
+    display: block;
+    padding-top: 120%;
 }
 
 .clips .clips__swiper-icon svg {
@@ -83,16 +88,16 @@
 // /////
 
 .clips__swiper-name {
-    font-size: 1rem;
+    font-size: clamp(13px, 1rem, 1rem);
     font-weight: 400;
-    line-height: 1.562rem;
+    line-height: 1.562em;
     color: var(--ayp-black-2);
 }
 
 .clips__swiper-time {
-    font-size: 0.875rem;
+    font-size: clamp(11px, .875rem, .875rem);
     font-weight: 400;
-    line-height: 1.375rem;
+    line-height: 1.571em;
     color: var(--ayp-black-2);
 }
 
@@ -138,62 +143,5 @@
 
     .clips__pagination-container {
         width: 100%;
-    }
-
-    .clips__sub {
-        font-size: 1.6rem;
-    }
-
-    .clips__item-a {
-        font-size: 1.333rem;
-    }
-
-    .clips__swiper-title {
-        font-size: 2.1333rem;
-    }
-
-    .clips__swiper-name {
-        font-size: 1.8666rem;
-    }
-
-    .clips__swiper-time {
-        font-size: 1.8666rem;
-    }
-}
-
-@media (max-width: 667px) {
-    .clips__sub {
-        font-size: 2.9090rem;
-        margin-right: 1.25rem;
-    }
-
-    .clips__swiper-title {
-        font-size: 2.9090rem;
-    }
-
-    .clips__swiper-name {
-        font-size: 2.5454rem;
-    }
-
-    .clips__swiper-time {
-        font-size: 2.5454rem;
-    }
-}
-
-@media (max-width: 414px) {
-    .clips__sub {
-        font-size: 4.285rem;
-    }
-
-    .clips__swiper-title {
-        font-size: 4.285rem;
-    }
-
-    .clips__swiper-name {
-        font-size: 3.428rem;
-    }
-
-    .clips__swiper-time {
-        font-size: 3.428rem;
     }
 }

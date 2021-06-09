@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>AYPVip</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -76,27 +76,30 @@
                             </li>
                         <li class="nav__top-item nav__top-icons">
                             <a class="nav__top-a --follow" href="#">Follow Us</a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-fb"></use>
-                                    </svg>                        
-                                </div>
-                            </a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-twitter"></use>
-                                    </svg>                  
-                                </div>
-                            </a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-ig"></use>
-                                    </svg>                                                            
-                                </div>
-                            </a>
+                            <div class="nav__top-social-icons">
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-fb"></use>
+                                        </svg>                        
+                                    </div>
+                                </a>
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-twitter"></use>
+                                        </svg>                  
+                                    </div>
+                                </a>
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-ig"></use>
+                                        </svg>                                                            
+                                    </div>
+                                </a>
+                            </div>
+                            
                         </li>
                     </ul>
                     <ul class="nav">
@@ -116,12 +119,7 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__a">
-                                Publicité
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="vip.html" class="nav__a">
+                            <a href="vip.html" class="nav__a active">
                                 Club VIP
                             </a>
                         </li>
@@ -148,22 +146,63 @@
             </div>
         </div>
     </header>
-    <!-- <div class="audio__container">
-        <img src="img/audio/Group 164.png" alt="audio image" class="audio__img">
-    </div> -->
+    <div class="audio">
+        <div class="audio__container">
+            <button type="button" class="audio__play-btn">
+                <span class="img-container">
+                    <svg class="icon">
+                        <use xlink:href="#play-btn"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="audio__player">
+                <div class="audio__time audio__time-left"></div>
+                <div class="audio__line">
+                    <div class="audio__line-controller"></div>
+                </div>
+                <div class="audio__time audio__time-total">3:33</div>
+            </div>
+            <div class="audio__voice">
+                <div class="audio__voice-icon">
+                    <div class="img-container">
+                        <svg class="icon">
+                            <use xlink:href="#volume"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="audio__voice-line">
+                    <div class="audio__voice-controller"></div>
+                </div>
+            </div>
+            <div class="audio__cover">
+                <div class="audio__cover-img">
+                    <div class="img-container">
+                        <img src="/img/audio/Iveta-Mukuchyan-New-York-Fashion-Week-Armenia-Eurovision-1-1 (1).png" alt="audio img">
+                    </div>
+                </div>
+                <div class="audio__cover-content">
+                    <div class="audio__cover-song">Hayastan Jan</div>
+                    <div class="audio__cover-singer">Iveta Mukuchyan</div>
+                </div>
+            </div>
+            <audio src="/music/Iveta Mukuchyan - Hayastan Jan Հայաստան ջան.mp3" class="audio__audio" ontimeupdate="audioPlayer()"></audio>
+        </div>
+    </div>
     <div class="vip__container container">
         <div class="title-container --full">
             <h3 class="box-title box-title">Rejoignez Notre Club VIP</h3>
         </div>
         <div class="vip__content">
             <div class="vip__info">
-                <p><strong>Bienvenue dans l'espace VIP d’Ayp Fm.</strong></p>
-                <br>
-                <p>En vous inscrivant à l’espace VIP, vous aurez accès à de nouvelles fonctionnalités, services et avantages proposés par Ayp Fm.</p>
-                <br>
-                <p>Vous aurez dés à présent la possibilité de télécharger dans votre ordinateur les émissions d’Ayp Fm stockées en Archives, de passer commandes de dédicaces qui seront diffusées lors de nos émissions « Dédicaces » du lundi et du vendredi, mais également d’être tenu informés des initiatives prises par Ayp Fm (émissions exceptionnelles, manifestations publiques, spectacles ...).</p>
-                <br>
-                <p>Le site d’Ayp Fm vous tiendra régulièrement informés des nouveaux avantages consentis aux membres de l’espace VIP.</p>
+                <div class="vip__info-container">
+                    <p><strong>Bienvenue dans l'espace VIP d’Ayp Fm.</strong></p>
+                    <br>
+                    <p>En vous inscrivant à l’espace VIP, vous aurez accès à de nouvelles fonctionnalités, services et avantages proposés par Ayp Fm.</p>
+                    <br>
+                    <p>Vous aurez dés à présent la possibilité de télécharger dans votre ordinateur les émissions d’Ayp Fm stockées en Archives, de passer commandes de dédicaces qui seront diffusées lors de nos émissions « Dédicaces » du lundi et du vendredi, mais également d’être tenu informés des initiatives prises par Ayp Fm (émissions exceptionnelles, manifestations publiques, spectacles ...).</p>
+                    <br>
+                    <p>Le site d’Ayp Fm vous tiendra régulièrement informés des nouveaux avantages consentis aux membres de l’espace VIP.</p>
+                </div>
             </div>
             <div class="vip__forms">
                 <div class="vip__box" id="first">
@@ -171,22 +210,22 @@
                     <div class="vip__box-sub">Merci de vous identifier :</div>
                     <form action="" class="vip__reg-form">
                         <div class="vip__reg-row">
-                            <label class="vip__reg-label">
+                            <label class="vip__label">
                                 <span class="vip__reg-label-text">
                                     Identifiant (email) :
                                 </span>
-                                <input type="email" class="vip__reg-input">
+                                <input type="email" class="vip__input">
                             </label>    
                         </div>
                         <div class="vip__reg-row">
-                            <label class="vip__reg-label">
-                                <span class="vip__reg-label-text">
+                            <label class="vip__label">
+                                <span class="vip__reg-label-text vip__reg-label-text_multi">
                                     Mot de passe :
                                     <span class="vip__reg-label-text-inner">
                                         Mot de passe oublié ?
                                     </span>
                                 </span>
-                                <input type="password" class="vip__reg-input">
+                                <input type="password" class="vip__input">
                             </label>
                         </div>
                         <div class="vip__btn-row">
@@ -198,7 +237,7 @@
                     <h3 class="vip__box-title">INSCRIPTION</h3>
                     <div class="vip__box-sub">Inscrivez vous pour rejoindre le club VIP de radio AYP et profiter de ces nombreux avantages</div>
                     <div class="vip__btn-row" id="center">
-                        <a href="#" class="vip__btn">INSCRIPTION</a>
+                        <a href="vip-reg.html" class="vip__btn">INSCRIPTION</a>
                     </div>
                 </div>
             </div>
@@ -221,9 +260,6 @@
                 </li>
                 <li class="footer__item">
                     <a href="" class="footer__item-link">Qui Sommes Nous</a>
-                </li>
-                <li class="footer__item">
-                    <a href="" class="footer__item-link">Publicité</a>
                 </li>
                 <li class="footer__item">
                     <a href="" class="footer__item-link">Club VIP</a>

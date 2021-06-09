@@ -68,19 +68,37 @@ svg {
 }
 
 .box-title {
-    font-size: 1.75em;
+    font-size: clamp(18px, 1.75rem, 1.75rem);
     font-weight: 400;
-    line-height: 1.5357em;
+    line-height: 1.535em;
+    letter-spacing: 0.03em;
     text-transform: capitalize;
     margin-bottom: 0.562rem;
+    white-space: nowrap;
+}
+
+.box-title.box-title_medium {
+    font-size: clamp(16px, 1.562rem, 1.562rem);
+    line-height: 1.56em;
+}
+
+.box-title.box-title_small {
+    font-size: clamp(14px, 1.125rem, 1.125rem);
+    line-height: 1.555em;
+}
+
+
+.box-title.box-title_support {
+    margin-top: 1.5em;
 }
 
 .box-sub {
-    font-size: 1em;
+    font-size: clamp(12px, 1rem, 1rem);
     font-weight: 400;
-    line-height: 1.5625em;
+    line-height: 1.562em;
     color: var(--ayp-black)0;
-    padding: 0 1.375em 0.8125em 1.375em;
+    margin-right: 4.25em;
+    margin-bottom: 1em;
     display: block;
     text-transform: capitalize;
 }
@@ -95,17 +113,25 @@ svg {
     display: flex;
     list-style-type: none;
     margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
 }
 
 .title-item-a {
-    font-size: 1rem;
+    font-size: clamp(12px, 1rem, 1rem);
     font-weight: 400;
-    line-height: 1.5625rem;
+    line-height: 1.562em;
     color: var(--ayp-black);
-    padding: 0.562rem 1.437rem 0.812rem 1.437rem;
+    padding: 0.562em 1.562em 0.812em 1.562em;
     display: block;
     text-transform: capitalize;
+    white-space: nowrap;
     border-bottom: solid 3px transparent;
+    transition: 300ms;
+}
+
+.title-item-a_last {
+    margin-right: 2.687rem;
 }
 
 .title-item-a.active,
@@ -125,17 +151,13 @@ svg {
     .title-container {
         width: 100%;
     }
-    
-    .box-title {
-        font-size: 2.8em;
-    }
-
-    .title-item-a {
-        font-size: 1.8em;
-    }
 
     .box-pagination-container {
         width: 100%;
+    }
+
+    .box-sub {
+        margin-right: 0;
     }
 }
 
@@ -156,11 +178,7 @@ svg {
         -ms-touch-action: none;
     }
 
-    .box-title {
-        font-size: 3.5em;
-    }
-
-    .title-inner-container {
+    .title-inner-container_withMenu {
         width: 100%;
     }
 
@@ -171,22 +189,11 @@ svg {
 
     .title-list {
         margin-right: 10px;
-        max-width: 100%;
-        overflow-x: auto;
-    }
-
-    .title-item-a {
-        font-size: 3em;
-        white-space: nowrap;
     }
 }
 
 @media only screen and (max-width:676px) {
-    .box-title {
-        font-size: 5.1em;
-    }
-
-    .title-container {
+    .title-container_withMenu {
         flex-direction: column;
         align-items: flex-start;
     }

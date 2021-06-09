@@ -2,13 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>AYPIndex</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet"> -->
 </head>
 <body class="body">
     <div id="fb-root"></div>
@@ -54,6 +53,9 @@
                 <path d="M17.116 13.969v6.444l.238-.13a7.1 7.1 0 003.581-5.268 10.2 10.2 0 00-.014-2.117 7.334 7.334 0 00-2.805-4.742 7.068 7.068 0 00-.885-.574l-.115-.06z"></path>
             </g>
         </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.648 565.648" id="pause-btn">
+            <path d="M282.824 0C126.877 0 0 126.877 0 282.824s126.877 282.824 282.824 282.824 282.824-126.877 282.824-282.824S438.771 0 282.824 0zm-35.353 388.883h-70.706V176.765h70.706zm141.412 0h-70.706V176.765h70.706z"></path>
+          </symbol>
       </svg>
       
     <header class="header">
@@ -78,32 +80,35 @@
                             </li>
                         <li class="nav__top-item nav__top-icons">
                             <a class="nav__top-a --follow" href="#">Follow Us</a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-fb"></use>
-                                    </svg>                        
-                                </div>
-                            </a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-twitter"></use>
-                                    </svg>                  
-                                </div>
-                            </a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-ig"></use>
-                                    </svg>                                                            
-                                </div>
-                            </a>
+                            <div class="nav__top-social-icons">
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-fb"></use>
+                                        </svg>                        
+                                    </div>
+                                </a>
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-twitter"></use>
+                                        </svg>                  
+                                    </div>
+                                </a>
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-ig"></use>
+                                        </svg>                                                            
+                                    </div>
+                                </a>
+                            </div>
+                            
                         </li>
                     </ul>
                     <ul class="nav">
                         <li class="nav__item">
-                            <a href="index.html" class="nav__a">
+                            <a href="index.html" class="nav__a active">
                                 Accueil
                             </a>
                         </li>
@@ -115,11 +120,6 @@
                         <li class="nav__item">
                             <a href="about.html" class="nav__a">
                                 Qui Sommes Nous
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#" class="nav__a">
-                                Publicité
                             </a>
                         </li>
                         <li class="nav__item">
@@ -152,9 +152,48 @@
             </div>
         </div>
     </header>
-    <!-- <div class="audio__container">
-        <img src="img/audio/Group 164.png" alt="audio image" class="audio__img">
-    </div> -->
+    <div class="audio">
+        <div class="audio__container">
+            <button type="button" class="audio__play-btn">
+                <span class="img-container">
+                    <svg class="icon">
+                        <use xlink:href="#play-btn"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="audio__player">
+                <div class="audio__time audio__time-left"></div>
+                <div class="audio__line">
+                    <div class="audio__line-controller"></div>
+                </div>
+                <div class="audio__time audio__time-total">3:33</div>
+            </div>
+            <div class="audio__voice">
+                <div class="audio__voice-icon">
+                    <div class="img-container">
+                        <svg class="icon">
+                            <use xlink:href="#volume"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="audio__voice-line">
+                    <div class="audio__voice-controller"></div>
+                </div>
+            </div>
+            <div class="audio__cover">
+                <div class="audio__cover-img">
+                    <div class="img-container">
+                        <img src="/img/audio/Iveta-Mukuchyan-New-York-Fashion-Week-Armenia-Eurovision-1-1 (1).png" alt="audio img">
+                    </div>
+                </div>
+                <div class="audio__cover-content">
+                    <div class="audio__cover-song">Hayastan Jan</div>
+                    <div class="audio__cover-singer">Iveta Mukuchyan</div>
+                </div>
+            </div>
+            <audio src="/music/Iveta Mukuchyan - Hayastan Jan Հայաստան ջան.mp3" class="audio__audio"></audio>
+        </div>
+    </div>
     <div class="search">
         <form class="search__form" action="get">
             <label class="search__label">
@@ -171,32 +210,32 @@
     </div>
     <section class="shows">
         <div class="shows__container container">
-            <div class="title-container">
+            <div class="title-container title-container_withMenu">
                 <h3 class="box-title">Nos Émissions</h3>
-                <div class="title-inner-container">
+                <div class="title-inner-container title-inner-container_withMenu">
                     <ul class="title-list">
                         <li class="title-item">
-                            <a href="#" class="title-item-a">
+                            <a href class="title-item-a">
                                 Voir Tout
                             </a>
                         </li>
                         <li class="title-item">
-                            <a href="#" class="title-item-a">
+                            <a href class="title-item-a">
                                 Journal FR
                             </a>
                         </li>
                         <li class="title-item">
-                            <a href="#" class="title-item-a">
+                            <a href class="title-item-a">
                                 Journal AM
                             </a>
                         </li>
                         <li class="title-item">
-                            <a href="#" class="title-item-a active">
+                            <a href class="title-item-a active">
                                 Français
                             </a>
                         </li>
                         <li class="title-item">
-                            <a href="#" class="title-item-a">
+                            <a href class="title-item-a title-item-a_last">
                                 Arménien
                             </a>
                         </li>
@@ -287,56 +326,56 @@
             </div>
             <div class="swiper-container podcasts__swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide podcasts">
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Harout Sassounian</p>
                         <p class="podcasts__swiper-title">Harout Sassounian</p>
                         <p class="podcasts__swiper-sub">Aujourd'hui</p>
-                    </div>
-                    <div class="swiper-slide podcasts">
+                    </a>
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Poésie Arménienne</p>
                         <p class="podcasts__swiper-title">Albert Assaderian</p>
                         <p class="podcasts__swiper-sub">28/05/2020</p>
-                    </div>
-                    <div class="swiper-slide podcasts">
+                    </a>
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Havadamk</p>
                         <p class="podcasts__swiper-title">Père Diraïr Keledjian</p>
                         <p class="podcasts__swiper-sub">27/05/2020</p>
-                    </div>
-                    <div class="swiper-slide podcasts">
+                    </a>
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">La Chanson comme...</p>
                         <p class="podcasts__swiper-title">Paulette Djadjikian</p>
                         <p class="podcasts__swiper-sub">27/05/2020</p>
-                    </div>
-                    <div class="swiper-slide podcasts">
+                    </a>
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Yerkaran Hayotz</p>
                         <p class="podcasts__swiper-title">Edward Barseghian</p>
                         <p class="podcasts__swiper-sub">27/05/2020</p>
-                    </div>
-                    <div class="swiper-slide podcasts">
+                    </a>
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Ayp fm Antsou tarz</p>
                         <p class="podcasts__swiper-title">Artak Tadevossian et ...</p>
                         <p class="podcasts__swiper-sub">26/05/2020</p>
-                    </div>
-                    <div class="swiper-slide podcasts">
+                    </a>
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Batmagan Antsoutardz</p>
                         <p class="podcasts__swiper-title">Hasmig Gulamirian</p>
                         <p class="podcasts__swiper-sub">25/05/2020</p>
-                    </div>   
-                    <div class="swiper-slide podcasts">
+                    </a>   
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Batmagan Antsoutardz</p>
                         <p class="podcasts__swiper-title">Hasmig Gulamirian</p>
                         <p class="podcasts__swiper-sub">25/05/2020</p>
-                    </div>   
-                    <div class="swiper-slide podcasts">
+                    </a>   
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Batmagan Antsoutardz</p>
                         <p class="podcasts__swiper-title">Hasmig Gulamirian</p>
                         <p class="podcasts__swiper-sub">25/05/2020</p>
-                    </div>   
-                    <div class="swiper-slide podcasts">
+                    </a>   
+                    <a href class="swiper-slide podcasts">
                         <p class="podcasts__date">Batmagan Antsoutardz</p>
                         <p class="podcasts__swiper-title">Hasmig Gulamirian</p>
                         <p class="podcasts__swiper-sub">25/05/2020</p>
-                    </div>   
+                    </a>   
                 </div>
                 <div class="podcasts__pagination-container">
                     <div class="swiper-pagination podcasts__pagination box-pagination"></div>
@@ -358,7 +397,7 @@
             </div>
             <div class="swiper-container clips__swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide clips">
+                    <a href class="swiper-slide clips">
                         <div class="clips__img-container">
                             <img src="img/clips/3.png" alt="slider pic" class="clips__img">
                         </div>
@@ -374,8 +413,8 @@
                         </div>
                         <p class="clips__swiper-name">Sirusho</p>
                         <p class="clips__swiper-time">4:01 mins</p>
-                    </div>
-                    <div class="swiper-slide clips">
+                    </a>
+                    <a href class="swiper-slide clips">
                         <div class="clips__img-container">
                             <img src="img/clips/4.png" alt="slider pic" class="clips__img">
                         </div>
@@ -391,8 +430,8 @@
                         </div>
                         <p class="clips__swiper-name">Razmik Amyan</p>
                         <p class="clips__swiper-time">4:46 mins</p>
-                    </div>
-                    <div class="swiper-slide clips">
+                    </a>
+                    <a href class="swiper-slide clips">
                         <div class="clips__img-container">
                             <img src="img/clips/2.png" alt="slider pic" class="clips__img">
                         </div>
@@ -408,8 +447,8 @@
                         </div>
                         <p class="clips__swiper-name">Kevork Hadjan</p>
                         <p class="clips__swiper-time">5:02 mins</p>
-                    </div>
-                    <div class="swiper-slide clips">
+                    </a>
+                    <a href class="swiper-slide clips">
                         <div class="clips__img-container">
                             <img src="img/clips/5.png" alt="slider pic" class="clips__img">
                         </div>
@@ -425,8 +464,8 @@
                         </div>
                         <p class="clips__swiper-name">Tigran Asatryan</p>
                         <p class="clips__swiper-time">3:28 mins</p>
-                    </div>
-                    <div class="swiper-slide clips">
+                    </a>
+                    <a href class="swiper-slide clips">
                         <div class="clips__img-container">
                             <img src="img/clips/4.png" alt="slider pic" class="clips__img">
                         </div>
@@ -442,8 +481,8 @@
                         </div>
                         <p class="clips__swiper-name">Razmik Amyan</p>
                         <p class="clips__swiper-time">4:46 mins</p>
-                    </div>
-                    <div class="swiper-slide clips">
+                    </a>
+                    <a href class="swiper-slide clips">
                         <div class="clips__img-container">
                             <img src="img/clips/2.png" alt="slider pic" class="clips__img">
                         </div>
@@ -459,8 +498,8 @@
                         </div>
                         <p class="clips__swiper-name">Kevork Hadjan</p>
                         <p class="clips__swiper-time">5:02 mins</p>
-                    </div>
-                    <div class="swiper-slide clips">
+                    </a>
+                    <a href class="swiper-slide clips">
                         <div class="clips__img-container">
                             <img src="img/clips/5.png" alt="slider pic" class="clips__img">
                         </div>
@@ -476,7 +515,7 @@
                         </div>
                         <p class="clips__swiper-name">Tigran Asatryan</p>
                         <p class="clips__swiper-time">3:28 mins</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="clips__pagination-container">
                     <div class="swiper-pagination clips__pagination box-pagination"></div>
@@ -487,7 +526,7 @@
     <section class="fm">
         <div class="fm__container container">
             <div class="fm__title-container">
-                <h3 class="fm__title box-title">AYP FM</h3>
+                <h3 class="box-title">AYP FM</h3>
             </div>
             <div class="fm__block-container">
                 <div class="fm__block">
@@ -505,7 +544,7 @@
     <section class="advertisers">
         <div class="container advertisers__container">
             <div class="advertisers__title-container">
-                <h3 class="advertisers__title box-title">Nos Annonceurs</h3>
+                <h3 class="box-title">Nos Annonceurs</h3>
             </div>
             <div class="advertisers__block-container">
                 <div class="advertisers__block">
@@ -555,9 +594,6 @@
                 </li>
                 <li class="footer__item">
                     <a href="" class="footer__item-link">Qui Sommes Nous</a>
-                </li>
-                <li class="footer__item">
-                    <a href="" class="footer__item-link">Publicité</a>
                 </li>
                 <li class="footer__item">
                     <a href="" class="footer__item-link">Club VIP</a>

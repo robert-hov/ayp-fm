@@ -4,51 +4,77 @@
 
 .vip__content {
     display: flex;
+    align-items: flex-start;
     margin-top: 3.125rem;
 }
 
 .vip__info {
-    width: 46.2%;
-    margin-right: auto;
+    position: relative;
+    flex-grow: 1;
+}
+
+.vip__info_reg::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+
+    width: 100%;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}   
+
+.vip__info-container {
+    margin-right: 13.312rem;
+    padding-bottom: 6.562rem;
 }
 
 .vip__info strong {
     color: var(--ayp-blue-light);
+    font-size: clamp(16px, 1.25rem, 1.25rem); 
 }
 
 .vip__info p {
-    font-size: 1.25em;
-    line-height: 2rem;
+    font-size: clamp(16px, 1.25rem, 1.25rem); 
+    line-height: 1.6em;
 }
 
 .vip__forms {
-    width: 32%;
     margin-right: 8.25rem;
+    flex-shrink: 0;
 }
 
 .vip__box {
-    padding: 0.875rem 2.25rem 2rem 1.5625rem;
+    font-size: clamp(14px, 1rem, 1rem);
+    padding: 0.875em 2.25em 2em 1.5625em;
     -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.21); 
     box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.21);
+    width: 31.5rem;
+    min-width: 370px;
 }
 
 #first.vip__box {
-    margin-bottom: 1.6875rem;
-    padding: 0.875rem 2.25rem 1.3125rem 1.5625rem;
+    margin-bottom: 1.6875em;
+    padding: 0.875em 2.25em 1.312em 1.562em;
 }
 
 .vip__box-title {
-    font-size: 1.25rem;
+    font-size: clamp(18px, 1.25rem, 1.25rem);
     font-weight: bold;
-    line-height: 2rem;
+    line-height: 1.6em;
 
     color: #FF5E00;
 }
 
+.vip__box-title_info {
+    margin-bottom: 0.687rem;
+}
+
 .vip__box-sub {
-    font-size: 1.093rem;
+    font-size: clamp(15px, 1.062rem, 1.062rem);
     font-weight: bold;
-    line-height: 1.75rem;
+    line-height: 1.588em;
 
     color: #7B7B7B;
 }
@@ -73,15 +99,15 @@
 .vip__btn {
     display: inline-block;
 
-    font-size: 0.875rem;
+    font-size: clamp(12px, 0.875rem, 0.875rem);
     font-weight: bold;
-    line-height: 1.375rem;
+    line-height: 1.571em;
 
-    padding: 0.75rem 1.75rem;
+    padding: 0.821em 2.035em;
     background-color: var(--ayp-orange-2);
     color: var(--ayp-white);
 
-    margin-top: 1rem;
+    margin-top: 1.142em;
 }
 
 .vip__reg-group {
@@ -92,6 +118,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: clamp(13px, 1rem, 1rem);
 }
 
 .vip__reg-row.vip__radio-row {
@@ -107,10 +134,26 @@
 }
 
 .vip__reg-row:first-child {
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.625em;
+}
+
+.vip__label {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+
+    color: var(--ayp-blue-dark);
+
+    font-size: 1.062rem;
+    font-weight: bold;
+    line-height: 1.687rem;
 }
 
 .vip__reg-label {
+    display: flex;
+    align-items: flex-start;
+
     font-size: 1.062rem;
     font-weight: bold;
     line-height: 1.687rem;
@@ -123,6 +166,14 @@
 
 .vip__radio-row .vip__reg-label {
     width: initial;
+    font-size: clamp(15px, 1.062rem, 1.062rem);
+    line-height: 1.588em;
+    align-items: center;
+}
+
+.vip__reg-row.vip__reg-row_reg {
+    font-size: 16px;
+    margin-bottom: 0.562em;
 }
 
 .vip__reg-check-label {
@@ -133,8 +184,51 @@
     color: #7B7B7B;
 }
 
+.vip__reg-label-text {
+    display: block;
+
+    margin-right: auto;
+
+    color:  var(--ayp-black-4);
+
+    font-size: clamp(15px, 1.062rem, 1.062rem);
+    font-weight: bold;
+    line-height: 1.588em;
+}
+
+.vip__reg-label-text_multi {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.vip__reg-label-text-inner {
+    color: var(--ayp-gray-dark);
+
+    font-size: clamp(10px, 0.75rem, 0.75rem);
+    font-weight: bold;
+    line-height: 1.583em;
+}
+
 .vip__reg-inner-label {
     margin-right: 1.875em;
+}
+
+.vip__input {
+    display: block;
+    min-height: 1.704em;
+    width: 15.375rem;
+    min-width: 180px;
+    flex-shrink: 0;
+
+    border: 1px solid #707070;
+    outline: none;
+    border-radius: 0;
+    background-color: var(--ayp-white);
+    box-shadow: none;
+    font-size: clamp(15px, 1rem, 1rem);
+    line-height: 1.562em;
+    padding: 0 0.6em;
 }
 
 .vip__reg-input,
@@ -170,110 +264,74 @@
     margin-top: 0.625rem;
 }
 
-@media (max-width: 900px) {
-    .vip__info {
-        width: 58%;
+@media (max-width: 1200px) {
+    .vip__info-container {
+        margin-right: 5rem;
     }
 
     .vip__forms {
-        width: 40%;
-    }
-
-    .vip__info p {
-        font-size: 1.8rem;
-    }
-
-    .vip__box-title {
-        font-size: 1.8rem;
-    }
-
-    .vip__box-sub {
-        font-size: 1.5rem;
-    }
-
-    .vip__reg-label {
-        font-size: 1.5rem;
-    }
-
-    .vip__reg-input {
-        font-size: 1.5rem;
-    }
-
-    .vip__btn {
-        font-size: 1.25rem;
+        width: unset;
+        margin-right: 0;
     }
 }
 
-@media (max-width: 667px) {
+@media (max-width: 900px) {
+    .vip__content {
+        flex-wrap: wrap;
+    }
+    .vip__info {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .vip__forms {
+        margin: 0 auto;
+    }
+
+    .vip__forms.vip__forms_reg {
+        font-size: 16px;
+        margin-top: 2em;
+    }
+
+    .vip__reg-label-text {
+        margin-top: .5em;
+        margin-bottom: .5em;
+    }
+
+    .vip__info-container {
+        margin-right: unset;
+    }
+
+    .vip__container {
+        padding: 5.875rem 1.25rem 6.375rem;
+    }
+
     .vip__content {
         flex-direction: column;
     }
 
-    .vip__info {
+    .vip__label {
+        flex-direction: column;
+    }
+
+    .vip__input {
         width: 100%;
     }
 
-    .vip__forms {
-        width: 52%;
-        margin: 0 auto;
-        margin-top: 3rem;
-    }
-
-    #first.vip__box {
-        margin-bottom: 4.5rem;
-    }
-
-    .vip__box-title {
-        font-size: 2.3rem;
-    }
-
-    .vip__info p {
-        font-size: 2.3rem;
-    }
-
-    .vip__box-sub {
-        font-size: 2rem;
-    }
-
-    .vip__reg-label {
-        font-size: 2rem;
-    }
-
-    .vip__reg-input {
-        font-size: 2rem;
-    }
-
-    .vip__btn {
-        font-size: 1.6rem;
+    .vip__reg-row.vip__radio-row {
+        justify-content: space-between;
     }
 }
 
-@media (max-width: 414px) {
-    .vip__forms {
-        width: 70%;
+@media (max-width: 667px) {
+    .vip__container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
-    .vip__info p {
-        font-size: 3rem;
-    }
+    
 
-    .vip__box-title {
-        font-size: 3rem;
-    }
-
-    .vip__box-sub {
-        font-size: 2.8rem;
-    }
-
-    .vip__reg-label {
-        font-size: 2.8rem;
-    }
-
-    .vip__reg-input {
-        font-size: 2.8rem;
-    }
-
-    .vip__btn {
-        font-size: 2.3rem;
+    .vip__box {
+        min-width: 280px;
     }
 }

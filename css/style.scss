@@ -9,11 +9,16 @@ html {
     font-family: var(--ayp-font);
     font-size: 0.833vw;
     max-height: 100%;
+    scrollbar-color: var(--ayp-blue-light) var(--ayp-gray-light) ;
+    scrollbar-width: thin;
 }
 
 
 body {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    min-height: 100vh;
     overflow-x: hidden;
     touch-action: pan-y;
 }

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <title>AYPProgramms</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -80,27 +80,30 @@
                             </li>
                         <li class="nav__top-item nav__top-icons">
                             <a class="nav__top-a --follow" href="#">Follow Us</a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-fb"></use>
-                                    </svg>                        
-                                </div>
-                            </a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-twitter"></use>
-                                    </svg>                  
-                                </div>
-                            </a>
-                            <a href="#" class="nav__top-img-container">
-                                <div class="img-container">
-                                    <svg class="icon">
-                                        <use xlink:href="#menu-ig"></use>
-                                    </svg>                                                            
-                                </div>
-                            </a>
+                            <div class="nav__top-social-icons">
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-fb"></use>
+                                        </svg>                        
+                                    </div>
+                                </a>
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-twitter"></use>
+                                        </svg>                  
+                                    </div>
+                                </a>
+                                <a href="#" class="nav__top-img-container">
+                                    <div class="img-container">
+                                        <svg class="icon">
+                                            <use xlink:href="#menu-ig"></use>
+                                        </svg>                                                            
+                                    </div>
+                                </a>
+                            </div>
+                            
                         </li>
                     </ul>
                     <ul class="nav">
@@ -120,17 +123,12 @@
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__a">
-                                Publicité
-                            </a>
-                        </li>
-                        <li class="nav__item">
                             <a href="vip.html" class="nav__a">
                                 Club VIP
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="contact.html" class="nav__a">
+                            <a href="contact.html" class="nav__a active">
                                 Écrivez-Nous
                             </a>
                         </li>
@@ -152,9 +150,48 @@
             </div>
         </div>
     </header>
-    <!-- <div class="audio__container">
-        <img src="img/audio/Group 164.png" alt="audio image" class="audio__img">
-    </div> -->
+    <div class="audio">
+        <div class="audio__container">
+            <button type="button" class="audio__play-btn">
+                <span class="img-container">
+                    <svg class="icon">
+                        <use xlink:href="#play-btn"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="audio__player">
+                <div class="audio__time audio__time-left"></div>
+                <div class="audio__line">
+                    <div class="audio__line-controller"></div>
+                </div>
+                <div class="audio__time audio__time-total">3:33</div>
+            </div>
+            <div class="audio__voice">
+                <div class="audio__voice-icon">
+                    <div class="img-container">
+                        <svg class="icon">
+                            <use xlink:href="#volume"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="audio__voice-line">
+                    <div class="audio__voice-controller"></div>
+                </div>
+            </div>
+            <div class="audio__cover">
+                <div class="audio__cover-img">
+                    <div class="img-container">
+                        <img src="/img/audio/Iveta-Mukuchyan-New-York-Fashion-Week-Armenia-Eurovision-1-1 (1).png" alt="audio img">
+                    </div>
+                </div>
+                <div class="audio__cover-content">
+                    <div class="audio__cover-song">Hayastan Jan</div>
+                    <div class="audio__cover-singer">Iveta Mukuchyan</div>
+                </div>
+            </div>
+            <audio src="/music/Iveta Mukuchyan - Hayastan Jan Հայաստան ջան.mp3" class="audio__audio" ontimeupdate="audioPlayer()"></audio>
+        </div>
+    </div>
     <div class="contact">
         <div class="contact__container container">
             <div class="title-container title-container_contact --full">
@@ -198,27 +235,29 @@
                         <div class="contact__block contact__block_half">
                             <label class="contact__label-radio">
                                 <span class="contact__label-text">Civilité* :</span>
-                                <label class="contact__label-radio_in">
-                                    <input type="radio" name="gender" class="contact__input-radio" checked>
-                                    <span class="custom-radio">
-                                        <span class="custom-radio-inner"></span>
-                                    </span>
-                                    <span class="contact__label-text">Mr</span>
-                                </label>
-                                <label class="contact__label-radio_in">
-                                    <input type="radio" name="gender" class="contact__input-radio">
-                                    <span class="custom-radio">
-                                        <span class="custom-radio-inner"></span>
-                                    </span>
-                                    <span class="contact__label-text">Mme</span>
-                                </label> 
-                                <label class="contact__label-radio_in">
-                                    <input type="radio" name="gender" class="contact__input-radio">
-                                    <span class="custom-radio">
-                                        <span class="custom-radio-inner"></span>
-                                    </span>
-                                    <span class="contact__label-text">Mlle</span>
-                                </label>
+                                <div class="contact__custom-radio-container">
+                                    <label class="contact__label-radio_in">
+                                        <input type="radio" name="gender" class="contact__input-radio" checked>
+                                        <span class="custom-radio">
+                                            <span class="custom-radio-inner"></span>
+                                        </span>
+                                        <span class="contact__label-text">Mr</span>
+                                    </label>
+                                    <label class="contact__label-radio_in">
+                                        <input type="radio" name="gender" class="contact__input-radio">
+                                        <span class="custom-radio">
+                                            <span class="custom-radio-inner"></span>
+                                        </span>
+                                        <span class="contact__label-text">Mme</span>
+                                    </label> 
+                                    <label class="contact__label-radio_in">
+                                        <input type="radio" name="gender" class="contact__input-radio">
+                                        <span class="custom-radio">
+                                            <span class="custom-radio-inner"></span>
+                                        </span>
+                                        <span class="contact__label-text">Mlle</span>
+                                    </label>  
+                                </div>
                             </label>
                             
                             
@@ -301,9 +340,6 @@
                 </li>
                 <li class="footer__item">
                     <a href="" class="footer__item-link">Qui Sommes Nous</a>
-                </li>
-                <li class="footer__item">
-                    <a href="" class="footer__item-link">Publicité</a>
                 </li>
                 <li class="footer__item">
                     <a href="" class="footer__item-link">Club VIP</a>
