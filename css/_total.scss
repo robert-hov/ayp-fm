@@ -11,6 +11,11 @@ background-color: var(--ayp-blue-light);
 outline: 1px solid slategrey;
 }
 
+input:focus {
+    outline: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.01);
+}
+
 .text-center {
     text-align: center;
     margin: 0 auto;

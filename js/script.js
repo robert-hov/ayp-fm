@@ -17,12 +17,32 @@ btn.addEventListener('click', function () {
     nav.classList.toggle('active')
 });
 
+//sub footer 
+
+{
+    const body = document.querySelector('body')
+    const subFooter = document.querySelector('.sub-footer');
+    const audio = document.querySelector('.audio');
+
+    body.onload = function() {
+        let audioHeight = audio.offsetHeight;
+        subFooter.style.marginBottom = audioHeight + "px";
+    }
+
+    body.onresize = function() {
+        let audioHeight = audio.offsetHeight;
+        subFooter.style.marginBottom = audioHeight + "px";
+    }
+}
+
 //audio
 
 {
     const playBnt = document.querySelector('.audio__play-btn');
     const audio = document.querySelector('.audio__audio');
     const audioTime = document.querySelector('.audio__time-left');
+    const audioVoice = document.querySelector('.audio__voice-icon');
+
 
     if (playBnt && audio) {
         playBnt.addEventListener('click', function () {
@@ -35,6 +55,21 @@ btn.addEventListener('click', function () {
                 audio.pause();
                 playBtnSvg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#play-btn')
                 playBtnSvg.style.fill="var(--ayp-orange)";
+            }
+        })
+    }
+
+    if (audio && audioVoice) {
+        const audioVoiceSvg = audioVoice.querySelector('use');
+        audioVoice.addEventListener('click', function(){
+            if(audio.muted == false) {
+                audio.muted = true;
+                audioVoiceSvg.style.fill="var(--ayp-gray-2)";
+                audioVoiceSvg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume-mute')
+            } else {
+                audio.muted = false;
+                audioVoiceSvg.style.fill="var(--ayp-orange)";
+                audioVoiceSvg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume')
             }
         })
     }

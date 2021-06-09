@@ -1,4 +1,5 @@
 .audio {
+    font-size: clamp(14px, 1rem ,1rem);
     position: fixed;
     top: 100%;
     left: 0;
@@ -12,22 +13,32 @@
 .audio__container {
     display: flex;
     align-items: center;
-
-    width: 55%;
-    margin: 0 auto;
-    padding: 0.5rem 0;    
+    justify-content: center;
+    // width: 55%;
+    // margin: 0 auto;
+    padding: 0.5em 0;    
 }
 
 .audio__audio {
     display: none;
 }
 
+.audio__buttons-container {
+    display: flex;
+}
+
+.audio__left-btn,
+.audio__right-btn {
+    display: none;
+}
+
 .audio__play-btn {
     position: relative;
     display: block;
-    width: 2.5rem;
-    margin-right: 3.125rem;
+    width: 2.5em;
+    margin-right: 3.125em;
     border: none;
+    cursor: pointer;
 
     background-color: transparent;
 }
@@ -52,8 +63,8 @@
 }
 
 .audio__time {
-    font-size: 0.875rem;
-    line-height: 1.375rem;
+    font-size: 0.875em;
+    line-height: 1.571em;
 }
 
 .audio__time-left {
@@ -85,17 +96,20 @@
     border-radius: 100%;
 
     background-color: var(--ayp-orange);
+    cursor: pointer;
 }
 
 .audio__voice {
     display: flex;
     align-items: center;
     margin-left: 2.675rem;
+    
 }
 
 .audio__voice-icon {
     position: relative;
-    width: 1.187rem;
+    width: 1.187em;
+    cursor: pointer;
 }
 
 .audio__voice-icon::before {
@@ -128,6 +142,7 @@
     border-radius: 100%;
 
     background-color: var(--ayp-orange);
+    cursor: pointer;
 }
 
 .audio__cover {
@@ -138,8 +153,8 @@
 
 .audio__cover-img {
     position: relative;
-    width: 3.375rem;
-    margin-right: 0.937rem;
+    width: 3.375em;
+    margin-right: 0.937em;
 }
 
 .audio__cover-img::before {
@@ -157,9 +172,9 @@
 .audio__cover-song {
     color: var(--ayp-gray-light-2);
 
-    font-size: 1.062rem;
+    font-size: 1.062em;
     font-weight: bold;
-    line-height: 1.687rem;
+    line-height: 1.588em;
     text-transform: capitalize;
     white-space: nowrap;
 }
@@ -167,8 +182,82 @@
 .audio__cover-singer {
     color: var(--ayp-gray-dark-2);
 
-    font-size: 0.875rem;
-    line-height: 1.375;
+    font-size: 0.875em;
+    line-height: 1.571em;
     text-transform: capitalize;
+}
+
+@media (max-width: 667px) {
+    .audio__left-btn,
+    .audio__right-btn {
+        display: block;
+        background-color: transparent;
+        border: none;
+    }
+
+    .audio__left-btn svg,
+    .audio__right-btn svg {
+        fill: var(--ayp-orange);
+        stroke: var(--ayp-orange);
+    }
+
+
+    .audio__left-btn,
+    .audio__right-btn {
+        position: relative;
+        width: 1.642em;
+    }
+
+    .audio__left-btn::before,
+    .audio__right-btn::before {
+        content: '';
+        display: block;
+        padding-top: 100%;
+    }
+    
+
+    .audio__cover {
+        order: 1;
+        margin-right: 1.785em;
+    }
+
+    .audio__cover-img {
+        display: none;
+    }
+
+    .audio__buttons-container {
+        order: 2;
+        margin: 0 1.714em;
+        align-items: center;
+    }
+
+    .audio__play-btn {
+        margin: 0 0.928em;
+    }
+
+    .audio__player {
+        order: 3;
+    } 
+
+    .audio__line {
+        display: none;
+    }
+
+    .audio__time-total {
+        display: none;
+    }
+
+    .audio__time-left {
+        margin-right: 2.264em;
+    }
+
+    .audio__voice {
+        order: 4;
+        margin-left: 1.521em;
+    }
+
+    .audio__voice-line {
+        display: none;
+    }
 }
 

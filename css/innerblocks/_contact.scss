@@ -143,6 +143,14 @@
     border: 1px solid #707070;
 }
 
+.contact__input {
+    border-radius: 0;
+    background-color: var(--ayp-white);
+    font-size: clamp(12px, 1rem, 1rem);
+    line-height: 1.562em;
+    padding: 0 0.6em;
+}
+
 
 .contact__input-radio {
     font-size: clamp(10px, 1rem , 1rem);
