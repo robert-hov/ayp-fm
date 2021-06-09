@@ -1426,7 +1426,7 @@ button.swiper-pagination-bullet {
 
 .header__info {
   width: 100%;
-  background: url(../../img/header/1@2x.jpg);
+  background: url(../img/header/1@2x.jpg);
   background-size: cover;
   background-position: top;
   position: relative;
