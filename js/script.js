@@ -86,16 +86,12 @@ btn.addEventListener('click', function () {
             item.addEventListener('click', function() {
                 item.closest('.prog__row').classList.toggle('active');
                 if (item.closest('.prog__row').className == 'prog__row prog__row_def active') {
-                    window.setTimeout(function() {
-                        item.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#minus')
-                    }, 250);
+                    item.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#minus');
                     item.querySelector('use').style.fill = 'var(--ayp-white)';
                     item.style.transform = 'rotate(180deg)';
                 } else {
-                    window.setTimeout(function() {
-                        item.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#plus')
-                    }, 250);
-                    item.querySelector('use').style.fill = 'var(--ayp-orange)'
+                    item.querySelector('use').setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#plus');
+                    item.querySelector('use').style.fill = 'var(--ayp-orange)';
                     item.style.transform = 'rotate(360deg)';
                 }
             }) 
