@@ -10,7 +10,7 @@
 }
 
 .shows__date {
-    font-size: clamp(13px, 1rem, 1rem);
+    font-size: 1rem;
     font-weight: bold;
     line-height: 1.785em;
     color: var(--ayp-blue-light);
@@ -22,7 +22,7 @@
 }
 
 .shows__swiper-title {
-    font-size: clamp(13px, 1rem, 1rem);
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.785em;
     color: var(--ayp-black-2);
@@ -34,7 +34,7 @@
 
 .shows__swiper-sub {
     color: var(--ayp-red);
-    font-size: clamp(11px, 0.875rem, 0.875rem);
+    font-size: 0.875rem;
     line-height: 1.571em;
     display: -webkit-box;
     -webkit-line-clamp: 1;

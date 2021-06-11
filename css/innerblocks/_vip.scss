@@ -32,11 +32,11 @@
 
 .vip__info strong {
     color: var(--ayp-blue-light);
-    font-size: clamp(16px, 1.25rem, 1.25rem); 
+    font-size: 1.25rem;
 }
 
 .vip__info p {
-    font-size: clamp(16px, 1.25rem, 1.25rem); 
+    font-size: 1.25rem;
     line-height: 1.6em;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .vip__box {
-    font-size: clamp(14px, 1rem, 1rem);
+    font-size: 1rem;
     padding: 0.875em 2.25em 2em 1.5625em;
     -webkit-box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.21); 
     box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.21);
@@ -60,7 +60,7 @@
 }
 
 .vip__box-title {
-    font-size: clamp(18px, 1.25rem, 1.25rem);
+    font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.6em;
 
@@ -72,7 +72,7 @@
 }
 
 .vip__box-sub {
-    font-size: clamp(15px, 1.062rem, 1.062rem);
+    font-size: 1.062rem;
     font-weight: bold;
     line-height: 1.588em;
 
@@ -99,7 +99,7 @@
 .vip__btn {
     display: inline-block;
 
-    font-size: clamp(12px, 0.875rem, 0.875rem);
+    font-size: 0.875rem;
     font-weight: bold;
     line-height: 1.571em;
 
@@ -118,7 +118,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: clamp(13px, 1rem, 1rem);
+    font-size: 1rem;
 }
 
 .vip__reg-row.vip__radio-row {
@@ -166,7 +166,7 @@
 
 .vip__radio-row .vip__reg-label {
     width: initial;
-    font-size: clamp(15px, 1.062rem, 1.062rem);
+    font-size: 1.062rem;
     line-height: 1.588em;
     align-items: center;
 }
@@ -191,7 +191,7 @@
 
     color:  var(--ayp-black-4);
 
-    font-size: clamp(15px, 1.062rem, 1.062rem);
+    font-size: 1.062rem;
     font-weight: bold;
     line-height: 1.588em;
 }
@@ -205,7 +205,7 @@
 .vip__reg-label-text-inner {
     color: var(--ayp-gray-dark);
 
-    font-size: clamp(10px, 0.75rem, 0.75rem);
+    font-size: 0.75rem;
     font-weight: bold;
     line-height: 1.583em;
 }
@@ -226,7 +226,7 @@
     border-radius: 0;
     background-color: var(--ayp-white);
     box-shadow: none;
-    font-size: clamp(15px, 1rem, 1rem);
+    font-size: 1rem;
     line-height: 1.562em;
     padding: 0 0.6em;
 }

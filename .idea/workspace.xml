@@ -2,24 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6c283c1-1c89-44b2-8d8c-d26a00427b60" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/achives.html" beforeDir="false" afterPath="$PROJECT_DIR$/achives.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/_var.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/homeblocks/_audio-popup.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/homeblocks/_audio-popup.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/homeblocks/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/homeblocks/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/homeblocks/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/homeblocks/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/homeblocks/_shows.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/homeblocks/_shows.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/innerblocks/_programms.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/innerblocks/_programms.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/programms.html" beforeDir="false" afterPath="$PROJECT_DIR$/programms.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vip-reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/vip-reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vip.html" beforeDir="false" afterPath="$PROJECT_DIR$/vip.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,11 +35,23 @@
       <updated>1622803985599</updated>
       <workItem from="1622803985968" duration="32000" />
       <workItem from="1623061495810" duration="2115000" />
+      <workItem from="1623409389552" duration="221000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -57,6 +57,7 @@ svg {
 }
 
 .title-container {
+    position: relative;
     width: 74.68%;
     display: flex;
     justify-content: space-between;
@@ -73,7 +74,7 @@ svg {
 }
 
 .box-title {
-    font-size: clamp(18px, 1.75rem, 1.75rem);
+    font-size: 1.75rem;
     font-weight: 400;
     line-height: 1.535em;
     letter-spacing: 0.03em;
@@ -83,12 +84,12 @@ svg {
 }
 
 .box-title.box-title_medium {
-    font-size: clamp(16px, 1.562rem, 1.562rem);
+    font-size: 1.562rem;
     line-height: 1.56em;
 }
 
 .box-title.box-title_small {
-    font-size: clamp(14px, 1.125rem, 1.125rem);
+    font-size: 1.125rem;
     line-height: 1.555em;
 }
 
@@ -98,7 +99,7 @@ svg {
 }
 
 .box-sub {
-    font-size: clamp(12px, 1rem, 1rem);
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.562em;
     color: var(--ayp-black)0;
@@ -123,7 +124,7 @@ svg {
 }
 
 .title-item-a {
-    font-size: clamp(12px, 1rem, 1rem);
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.562em;
     color: var(--ayp-black);
@@ -152,16 +153,54 @@ svg {
     justify-content: center;
 }
 
+@media only screen and (max-width: 1080px) {
+    .title-container_swiper {
+        align-items: flex-start;
+    }
+    
+    .title-container_swiper .title-inner-container {
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+    }
+
+    .title-container_swiper .pagination-container {
+        order: 1;
+    }
+
+    .title-container_swiper .box-sub {
+        order: 2;
+        margin-top: 1em;
+
+    }
+
+    .title-container_swiper .title-list {
+        order: 2;
+        margin-top: 1em;
+    }
+
+    .title-item-a_last {
+        margin-right: 0;
+    }
+
+    .title-container_swiper .box-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        line-height: 1;
+    }
+}
+
 @media only screen and (max-width: 900px) {
-    .title-container {
+    .title-container_swiper {
         width: 100%;
     }
 
-    .box-pagination-container {
+    .title-container_swiper .box-pagination-container {
         width: 100%;
     }
 
-    .box-sub {
+    .title-container_swiper .box-sub {
         margin-right: 0;
     }
 }
@@ -169,7 +208,7 @@ svg {
 @media only screen and (max-width:676px) {
     .container {
         width: 100%;
-        padding: 0 20px
+        padding: 0 24px
     }
 
     #container {

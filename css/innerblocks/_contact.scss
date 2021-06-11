@@ -18,7 +18,7 @@
 .contact__card-box {
     width: 24.841%;
     min-width: 250px;
-    font-size: clamp(13px, 1rem, 1rem);
+    font-size: 1rem;
     padding: 2.437em 2.218em 1.062em;
 
     background-color: var(--ayp-blue-dark);
@@ -40,7 +40,7 @@
 .contact__card-text {
     color: var(--ayp-white);
 
-    font-size: clamp(14px, 1.062rem, 1.062rem);
+    font-size: 1.062rem;
     font-weight: 400;
     line-height: 1.588em;
     text-align: center;
@@ -76,7 +76,7 @@
 .contact__form-container {
     display: flex;
     justify-content: center;
-    font-size: clamp(12px, 1rem, 1rem);
+    font-size: 1rem;
 
     width: 64.797%;
     margin: 2.25em auto 9.218em;
@@ -97,7 +97,7 @@
 
     color: #FF5E00;
 
-    font-size: clamp(14px, 1.25rem, 1.25rem);
+    font-size: 1.25rem;
     font-weight: bold;
     line-height: 1.6em;
 }
@@ -106,6 +106,7 @@
     font-size: 16px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 1.375em;
 }
 
@@ -126,6 +127,7 @@
 .contact__label-radio {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .contact__label-radio_in {
@@ -146,14 +148,14 @@
 .contact__input {
     border-radius: 0;
     background-color: var(--ayp-white);
-    font-size: clamp(12px, 1rem, 1rem);
+    font-size: 1rem;
     line-height: 1.562em;
     padding: 0 0.6em;
 }
 
 
 .contact__input-radio {
-    font-size: clamp(10px, 1rem , 1rem);
+    font-size: 1rem;
     opacity: 0;
     margin-right: 0.5em;
     height: 1.238em;
@@ -170,7 +172,7 @@
 }
 
 .custom-radio {
-    font-size: clamp(10px, 1rem , 1rem);
+    font-size: 1rem;
     
     position: absolute;
     left:0;
@@ -208,7 +210,7 @@
 
     color: var(--ayp-blue-dark);
 
-    font-size: clamp(12px, 1.062rem, 1.062rem);
+    font-size: 1.062rem;
     font-weight: bold;
     line-height: 1.588em;
 }
@@ -298,7 +300,7 @@
     text-align: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
     .contact__form-row {
         flex-direction: column;
         margin: 0;
@@ -328,6 +330,14 @@
 
     .contact__block {
         margin-bottom: 2rem;
+    }
+
+    .contact__custom-radio-container {
+        margin-top: .75rem;
+    }
+
+    .contact__label-radio_in:first-child {
+        margin-left: 0;
     }
 }
 
