@@ -23,6 +23,30 @@
     display: flex;
 }
 
+.pagination-num:first-child {
+    padding-left: 0.687em;
+}
+
+.pagination-num {
+    padding-right: 0.375em;
+    padding-left: 0.375em;
+
+    color: var(--ayp-black-2);
+    
+    font-size: 1rem;
+    line-height: 1.562em;
+}
+
+.pagination-num:last-child {
+    padding-right: 0.687em;
+}
+
+.pagination-num.active {
+    color: var(--ayp-blue-light);
+}
+
+
+
 .box-pagination .swiper-pagination-bullet {
     width: 49px;
     height: 4px;

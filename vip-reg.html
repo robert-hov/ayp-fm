@@ -212,7 +212,7 @@
                         <div class="vip__reg-row vip__reg-row_reg">
                             <label class="vip__label">
                                 <span class="vip__reg-label-text">
-                                    Identifiant (email)* :
+                                    Identifiant (email)<span class="vip__red">*</span> :
                                 </span>
                                 <input type="email" class="vip__input">
                             </label>    
@@ -220,22 +220,44 @@
                         <div class="vip__reg-row vip__reg-row_reg">
                             <label class="vip__label">
                                 <span class="vip__reg-label-text">
-                                    Mot de passe* :
+                                    Mot de passe<span class="vip__red">*</span> :
                                 </span>
                                 <input type="password" class="vip__input">
                             </label>
                         </div>
                         <h3 class="vip__box-title vip__box-title_info">Vos informations :</h3>
                         <div class="vip__reg-row vip__radio-row" id="vip__mb-10">
-                            <label class="vip__reg-label">Civilité</label>
-                            <label for="radio-mr" class="vip__reg-label"><input type="radio" id="radio-mr" name="gender" checked>Mr</label>
-                            <label for="radio-mme" class="vip__reg-label"><input type="radio" id="radio-mme" name="gender">Mme</label>
-                            <label for="radio-mlle" class="vip__reg-label"><input type="radio" id="radio-mlle" name="gender">Mlle</label>
+                            <label class="contact__label-radio">
+                                <span class="contact__label-text">Civilité<span class="vip__red">*</span> :</span>
+                                <div class="contact__custom-radio-container">
+                                    <label class="contact__label-radio_in">
+                                        <input type="radio" name="gender" class="contact__input-radio" checked>
+                                        <span class="custom-radio">
+                                            <span class="custom-radio-inner"></span>
+                                        </span>
+                                        <span class="contact__label-text">Mr</span>
+                                    </label>
+                                    <label class="contact__label-radio_in">
+                                        <input type="radio" name="gender" class="contact__input-radio">
+                                        <span class="custom-radio">
+                                            <span class="custom-radio-inner"></span>
+                                        </span>
+                                        <span class="contact__label-text">Mme</span>
+                                    </label> 
+                                    <label class="contact__label-radio_in">
+                                        <input type="radio" name="gender" class="contact__input-radio">
+                                        <span class="custom-radio">
+                                            <span class="custom-radio-inner"></span>
+                                        </span>
+                                        <span class="contact__label-text">Mlle</span>
+                                    </label>  
+                                </div>
+                            </label>
                         </div>
                         <div class="vip__reg-row vip__reg-row_reg">
                             <label class="vip__label">
                                 <span class="vip__reg-label-text">
-                                    Nom* :
+                                    Nom<span class="vip__red">*</span> :
                                 </span>
                                 <input type="email" class="vip__input">
                             </label>    
@@ -243,7 +265,7 @@
                         <div class="vip__reg-row vip__reg-row_reg">
                             <label class="vip__label">
                                 <span class="vip__reg-label-text vip__reg-label-text_multi">
-                                    Prénom* :
+                                    Prénom<span class="vip__red">*</span> :
                                 </span>
                                 <input type="password" class="vip__input">
                             </label>
@@ -251,7 +273,7 @@
                         <div class="vip__reg-row vip__reg-row_reg">
                             <label class="vip__label">
                                 <span class="vip__reg-label-text vip__reg-label-text_multi">
-                                    Confirmation du mote de passe* :
+                                    Confirmation du mote de passe<span class="vip__red">*</span> :
                                 </span>
                                 <input type="password" class="vip__input">
                             </label>

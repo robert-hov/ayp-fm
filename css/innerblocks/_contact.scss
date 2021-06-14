@@ -342,6 +342,15 @@
 }
 
 @media (max-width: 676px) {
+    .contact__form-container {
+        width: 90%;
+    }
+
+    .contact__form {
+        padding-right: 2rem;
+        padding-left: 2rem;
+    }
+
     .contact__map-container {
         flex-direction: column;
     }
@@ -363,6 +372,10 @@
 @media (max-width: 414px) {
     .contact__label {
         flex-direction: column;
+    }
+
+    .contact__label-radio_in .contact__label-text {
+        margin-bottom: 0;
     }
 
     .contact__label-text {

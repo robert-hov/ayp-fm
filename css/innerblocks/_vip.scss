@@ -196,12 +196,6 @@
     line-height: 1.588em;
 }
 
-.vip__reg-label-text_multi {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
 .vip__reg-label-text-inner {
     color: var(--ayp-gray-dark);
 
@@ -328,10 +322,16 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-
     
+    .vip__forms {
+        width: 100%;
+    }
 
     .vip__box {
-        min-width: 280px;
+        width: 80%;
+        min-width: unset;
+        margin: 0 auto;
     }
+
+
 }
