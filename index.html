@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
     <title>AYPIndex</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/swiper.min.css">
-    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="body">
@@ -65,15 +63,28 @@
         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461.55 461.55" id="volume-mute">
             <path d="M345.525 229.5c0-45.9-25.5-84.15-63.75-102v56.1l63.75 63.75V229.5zm63.75 0c0 22.95-5.1 45.9-12.75 66.3l38.25 38.25c17.85-30.6 25.5-68.85 25.5-107.1 0-109.65-76.5-201.45-178.5-224.4V56.1c73.95 25.5 127.5 91.8 127.5 173.4zM34.425 0L1.275 33.15 121.125 153H1.275v153h102l127.5 127.5V262.65l109.65 109.65c-17.851 12.75-35.7 22.95-58.65 30.601v53.55c35.7-7.65 66.3-22.95 94.35-45.9l51 51 33.15-33.149-229.5-229.5L34.425 0zm196.35 25.5l-53.55 53.55 53.55 53.55V25.5z"></path>
         </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448" id="plus">
+            <path d="M408 184H272a8 8 0 01-8-8V40c0-22.09-17.91-40-40-40s-40 17.91-40 40v136a8 8 0 01-8 8H40c-22.09 0-40 17.91-40 40s17.91 40 40 40h136a8 8 0 018 8v136c0 22.09 17.91 40 40 40s40-17.91 40-40V272a8 8 0 018-8h136c22.09 0 40-17.91 40-40s-17.91-40-40-40zm0 0"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121.805 121.804" id="minus">
+            <path d="M7.308 68.211h107.188a7.309 7.309 0 007.309-7.31 7.308 7.308 0 00-7.309-7.309H7.308a7.31 7.31 0 000 14.619z"></path>
+        </symbol>
       </svg>
       
     <header class="header">
         <div class="nav__container">
             <div class="container nav__inner">
                 <a href="index.html" class="logo__container">
-                    <div class="img-container">
-                        <img src="img/logo.png" alt="ayp logo" class="nav__logo">
-                    </div>    
+                    <div class="nav__logo-box">
+                        <div class="img-container">
+                            <img src="img/logo.png" alt="ayp logo" class="nav__logo">
+                        </div>    
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-text-header">AYP FM LA RADIO 
+                            arménien sur <span class="logo-text-header_orange">99.5 </span></span>
+                        <span class="logo-text-desc">site officiel | radio-aypfm.com</span>
+                    </div>
                 </a>
                 <div class="nav__container-inner">
                     <ul class="nav__top">
@@ -171,7 +182,7 @@
                         </svg>
                     </span>
                 </button>
-                <button type="button" class="audio__play-btn">
+                <button type="button" class="audio__play-btn" onclick="playOrPauseSong(this);">
                     <span class="img-container">
                         <svg class="icon">
                             <use xlink:href="#play-btn"></use>
@@ -186,23 +197,23 @@
                     </span>
                 </button>
             </div>
-            <div class="audio__player">
-                <div class="audio__time audio__time-left">3:01</div>
-                <div class="audio__line">
-                    <div class="audio__line-controller"></div>
+            <div class="audio__right">
+                <div class="audio__player">
+                    <div class="audio__time audio__time-current">0:00</div>
+                    <!-- <div class="audio__line"> -->
+                        <input type="range" class="audio__progress" min="0" step="1" onchange="seekSong()">
+                    <!-- </div> -->
+                    <div class="audio__time audio__time-total"></div>
                 </div>
-                <div class="audio__time audio__time-total">3:33</div>
-            </div>
-            <div class="audio__voice">
-                <div class="audio__voice-icon">
-                    <div class="img-container">
-                        <svg class="icon">
-                            <use xlink:href="#volume"></use>
-                        </svg>
-                    </div>
-                </div>
-                <div class="audio__voice-line">
-                    <div class="audio__voice-controller"></div>
+                <div class="audio__voice">
+                    <button class="audio__voice-icon" onclick="muteVolume()">
+                        <span class="img-container">
+                            <svg class="icon">
+                                <use xlink:href="#volume"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <input type="range" class="audio__voice-progress" min="0" max="1" step="0.01" onchange="adjustVolume()">
                 </div>
             </div>
             <div class="audio__cover">
@@ -587,21 +598,25 @@
             </div>
         </div>
     </section>
-    <!-- <section class="network">
+    <section class="network">
         <div class="container network-container">
             <div class="network-title-container">
-                <h3 class="network-title">Nos Reseaux</h3>
+                <h3 class="box-title">Nos Reseaux</h3>
             </div>
             <div class="network-blocks-container">
                 <div class="network-block --twitter">
                     <a class="twitter-timeline" href="https://twitter.com/AYPFM?ref_src=twsrc%5Etfw">Tweets by AYPFM</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
                 <div class="network-block --facebook">
-                    <div class="fb-page" data-href="https://www.facebook.com/radioaypfm.tsaynaspur/" data-tabs="timeline" data-width="500" data-height="406" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/radioaypfm.tsaynaspur/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/radioaypfm.tsaynaspur/">RADIO AYP FM</a></blockquote></div>
+                    <div class="fb-img">
+                        <div class="img-container">
+                            <img src="/img/network/Capture1.PNG" alt="facebook">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
     <footer class="footer">
         <div class="container footer__container">
             <a href="#" class="footer__img-contianer footer__nav">

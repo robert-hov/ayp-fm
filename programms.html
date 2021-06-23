@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, viewport-fit=cover">
     <title>AYPProgramms</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -54,6 +54,18 @@
                 <path d="M17.116 13.969v6.444l.238-.13a7.1 7.1 0 003.581-5.268 10.2 10.2 0 00-.014-2.117 7.334 7.334 0 00-2.805-4.742 7.068 7.068 0 00-.885-.574l-.115-.06z"></path>
             </g>
         </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 565.648 565.648" id="pause-btn">
+            <path d="M282.824 0C126.877 0 0 126.877 0 282.824s126.877 282.824 282.824 282.824 282.824-126.877 282.824-282.824S438.771 0 282.824 0zm-35.353 388.883h-70.706V176.765h70.706zm141.412 0h-70.706V176.765h70.706z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" id="audio-left">
+            <path d="M150.003 0C67.162 0 0 67.159 0 150c0 82.838 67.162 150 150.003 150S300 232.838 300 150C300 67.157 232.843 0 150.003 0zm78.436 198.529c-1.292.744-2.731 1.12-4.171 1.12s-2.882-.376-4.173-1.12l-71.239-41.127v33.899a8.34 8.34 0 01-4.173 7.228 8.365 8.365 0 01-4.173 1.12 8.35 8.35 0 01-4.171-1.12l-71.54-41.301a8.348 8.348 0 010-14.456l71.535-41.304a8.348 8.348 0 0112.519 7.228V142.6l71.237-41.132a8.355 8.355 0 018.346 0 8.348 8.348 0 014.173 7.228v82.605h.003a8.34 8.34 0 01-4.173 7.228z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" id="audio-right">
+            <path d="M150 0C67.157 0 0 67.157 0 150c0 82.841 67.157 150 150 150 82.838 0 150-67.159 150-150C300 67.157 232.838 0 150 0zm85.188 157.228l-71.532 41.301a8.35 8.35 0 01-4.171 1.123 8.358 8.358 0 01-8.344-8.349v-33.899l-71.239 41.125a8.368 8.368 0 01-4.173 1.123 8.361 8.361 0 01-4.171-1.123 8.341 8.341 0 01-4.173-7.226v-82.605a8.347 8.347 0 0112.519-7.228l71.237 41.132v-33.904a8.343 8.343 0 014.171-7.228 8.36 8.36 0 018.349 0l71.532 41.304a8.315 8.315 0 014.168 7.226 8.337 8.337 0 01-4.173 7.228z"></path>
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 461.55 461.55" id="volume-mute">
+            <path d="M345.525 229.5c0-45.9-25.5-84.15-63.75-102v56.1l63.75 63.75V229.5zm63.75 0c0 22.95-5.1 45.9-12.75 66.3l38.25 38.25c17.85-30.6 25.5-68.85 25.5-107.1 0-109.65-76.5-201.45-178.5-224.4V56.1c73.95 25.5 127.5 91.8 127.5 173.4zM34.425 0L1.275 33.15 121.125 153H1.275v153h102l127.5 127.5V262.65l109.65 109.65c-17.851 12.75-35.7 22.95-58.65 30.601v53.55c35.7-7.65 66.3-22.95 94.35-45.9l51 51 33.15-33.149-229.5-229.5L34.425 0zm196.35 25.5l-53.55 53.55 53.55 53.55V25.5z"></path>
+        </symbol>
         <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 448" id="plus">
             <path d="M408 184H272a8 8 0 01-8-8V40c0-22.09-17.91-40-40-40s-40 17.91-40 40v136a8 8 0 01-8 8H40c-22.09 0-40 17.91-40 40s17.91 40 40 40h136a8 8 0 018 8v136c0 22.09 17.91 40 40 40s40-17.91 40-40V272a8 8 0 018-8h136c22.09 0 40-17.91 40-40s-17.91-40-40-40zm0 0"></path>
         </symbol>
@@ -66,9 +78,16 @@
         <div class="nav__container">
             <div class="container nav__inner">
                 <a href="index.html" class="logo__container">
-                    <div class="img-container">
-                        <img src="img/logo.png" alt="ayp logo" class="nav__logo">
-                    </div>    
+                    <div class="nav__logo-box">
+                        <div class="img-container">
+                            <img src="img/logo.png" alt="ayp logo" class="nav__logo">
+                        </div>    
+                    </div>
+                    <div class="logo-text">
+                        <span class="logo-text-header">AYP FM LA RADIO 
+                            arménien sur <span class="logo-text-header_orange">99.5 </span></span>
+                        <span class="logo-text-desc">site officiel | radio-aypfm.com</span>
+                    </div>
                 </a>
                 <div class="nav__container-inner">
                     <ul class="nav__top">
@@ -156,30 +175,46 @@
     </header>
     <div class="audio">
         <div class="audio__container">
-            <button type="button" class="audio__play-btn">
-                <span class="img-container">
-                    <svg class="icon">
-                        <use xlink:href="#play-btn"></use>
-                    </svg>
-                </span>
-            </button>
-            <div class="audio__player">
-                <div class="audio__time audio__time-left"></div>
-                <div class="audio__line">
-                    <div class="audio__line-controller"></div>
-                </div>
-                <div class="audio__time audio__time-total">3:33</div>
-            </div>
-            <div class="audio__voice">
-                <div class="audio__voice-icon">
-                    <div class="img-container">
+            <div class="audio__buttons-container">
+                <button type="button" class="audio__left-btn">
+                    <span class="img-container">
                         <svg class="icon">
-                            <use xlink:href="#volume"></use>
+                            <use xlink:href="#audio-left"></use>
                         </svg>
-                    </div>
+                    </span>
+                </button>
+                <button type="button" class="audio__play-btn" onclick="playOrPauseSong(this);">
+                    <span class="img-container">
+                        <svg class="icon">
+                            <use xlink:href="#play-btn"></use>
+                        </svg>
+                    </span>
+                </button>
+                <button type="button" class="audio__right-btn">
+                    <span class="img-container">
+                        <svg class="icon">
+                            <use xlink:href="#audio-right"></use>
+                        </svg>
+                    </span>
+                </button>
+            </div>
+            <div class="audio__right">
+                <div class="audio__player">
+                    <div class="audio__time audio__time-current">0:00</div>
+                    <!-- <div class="audio__line"> -->
+                        <input type="range" class="audio__progress" min="0" step="1" onchange="seekSong()">
+                    <!-- </div> -->
+                    <div class="audio__time audio__time-total"></div>
                 </div>
-                <div class="audio__voice-line">
-                    <div class="audio__voice-controller"></div>
+                <div class="audio__voice">
+                    <button class="audio__voice-icon" onclick="muteVolume()">
+                        <span class="img-container">
+                            <svg class="icon">
+                                <use xlink:href="#volume"></use>
+                            </svg>
+                        </span>
+                    </button>
+                    <input type="range" class="audio__voice-progress" min="0" max="1" step="0.01" onchange="adjustVolume()">
                 </div>
             </div>
             <div class="audio__cover">
@@ -193,7 +228,7 @@
                     <div class="audio__cover-singer">Iveta Mukuchyan</div>
                 </div>
             </div>
-            <audio src="/music/Iveta Mukuchyan - Hayastan Jan Հայաստան ջան.mp3" class="audio__audio" ontimeupdate="audioPlayer()"></audio>
+            <audio src="/music/Iveta Mukuchyan - Hayastan Jan Հայաստան ջան.mp3" class="audio__audio"></audio>
         </div>
     </div>
     <div class="search">

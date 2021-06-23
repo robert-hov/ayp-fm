@@ -34,7 +34,7 @@ a {
   text-decoration: none;
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1024px) {
   html {
     font-size: clamp(12px, 1.481vw, 1.481vw);
   }
@@ -50,6 +50,7 @@ a {
   --ayp-white--64: rgba(255,255,255,0.64);
   --ayp-gray-light: rgb(241,241,241);
   --ayp-gray-light-2: rgb(200,200,200);
+  --ayp-gray-light-3: rgb(229, 229, 229);
   --ayp-gray-lighter: rgb(238,238,238);
   --ayp-gray: rgb(242,242,242);
   --ayp-gray-2: rgb(165,165,165);
@@ -140,6 +141,8 @@ svg {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -1148,7 +1151,7 @@ button.swiper-pagination-bullet {
 }
 
 .nav__top-a {
-  font-size: .875rem;
+  font-size: clamp(13px, 0.875rem, 0.875rem);
   font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1229,23 +1232,61 @@ button.swiper-pagination-bullet {
 }
 
 .logo__container {
-  position: relative;
-  display: block;
-  width: 25.687rem;
-  min-width: 220px;
-  margin: 1em 0;
-  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1.125rem;
+  margin-bottom: 0.875rem;
 }
 
-.logo__container::before {
+.nav__logo-box {
+  position: relative;
+  width: 7.625rem;
+  margin-right: 0.718rem;
+}
+
+.nav__logo-box::before {
   content: '';
   display: block;
-  padding-top: 21.897%;
+  padding-top: 69.421%;
 }
 
 .nav__logo {
-  max-width: 100%;
-  max-height: 100%;
+  height: 100%;
+}
+
+.logo-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 14.75rem;
+}
+
+.logo-text-header {
+  color: var(--ayp-blue-light);
+  font-size: 1.375rem;
+  line-height: 1.136em;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.logo-text-header_orange {
+  color: var(--ayp-orange);
+}
+
+.logo-text-desc {
+  color: var(--ayp-white);
+  font-size: 0.687rem;
+  line-height: 1.636em;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .nav {
@@ -1262,7 +1303,7 @@ button.swiper-pagination-bullet {
 
 .nav__a {
   color: var(--ayp-white);
-  font-size: 1rem;
+  font-size: clamp(14px, 1rem, 1rem);
   font-weight: 400;
   line-height: 1.562em;
   padding: 0 1.562em 0.875em;
@@ -1357,11 +1398,14 @@ button.swiper-pagination-bullet {
   position: relative;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1024px) {
   body.active-menu {
     overflow-y: hidden;
     -ms-touch-action: none;
         touch-action: none;
+  }
+  .container.nav__inner {
+    padding: 0 2rem;
   }
   .nav__container {
     position: relative;
@@ -1383,7 +1427,7 @@ button.swiper-pagination-bullet {
     height: calc(100vh - 4.764rem);
     overflow-y: auto;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.95);
     z-index: -1;
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -1458,14 +1502,26 @@ button.swiper-pagination-bullet {
   .nav__top-img-container:not(:last-child) {
     margin-right: 1rem;
   }
-  .logo__container {
-    max-width: 250px;
+}
+
+@media (max-width: 667px) {
+  .nav__burger-btn-container {
+    margin-right: 0;
   }
 }
 
 @media (max-width: 414px) {
   .logo__container {
-    max-width: 220px;
+    max-width: 231px;
+  }
+  .logo-text-header {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 500px) {
+  .nav__container-inner {
+    padding-bottom: 70px;
   }
 }
 
@@ -1561,7 +1617,7 @@ button.swiper-pagination-bullet {
 }
 
 .audio {
-  font-size: 1rem;
+  font-size: clamp(14px, 1rem, 1rem);
   position: fixed;
   top: 100%;
   left: 0;
@@ -1632,14 +1688,20 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 79.714%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .audio__time {
   font-size: 0.875em;
   line-height: 1.571em;
+  width: 2.542rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
-.audio__time-left {
+.audio__time-current {
   color: var(--ayp-orange);
 }
 
@@ -1647,25 +1709,45 @@ button.swiper-pagination-bullet {
   color: var(--ayp-gray-2);
 }
 
-.audio__line {
+.audio__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 37.239%;
+}
+
+.audio__progress {
+  display: block;
   position: relative;
-  width: 30.75rem;
+  z-index: 2;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   height: 2px;
   margin: 0 0.625rem;
   background-color: var(--ayp-orange);
+  -webkit-appearance: none;
 }
 
-.audio__line-controller {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  height: 0.625rem;
-  width: 0.625rem;
+.audio__progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: var(--ayp-orange);
   cursor: pointer;
+}
+
+.audio__progress::-ms-track {
+  background-color: var(--ayp-gray-light-3);
+  border-color: transparent;
+  color: transparent;
+}
+
+.audio__progress:focus {
+  background-color: var(--ayp-orange);
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 .audio__voice {
@@ -1675,13 +1757,21 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 2.675rem;
+  margin-left: 3%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .audio__voice-icon {
   position: relative;
   width: 1.187em;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
 }
 
 .audio__voice-icon::before {
@@ -1691,28 +1781,37 @@ button.swiper-pagination-bullet {
 }
 
 .audio__voice-icon svg {
-  fill: var(--ayp-gray-2);
+  fill: var(--ayp-orange);
 }
 
-.audio__voice-line {
+.audio__voice-progress {
   position: relative;
-  width: 4.375rem;
+  display: block;
+  width: 100%;
   height: 2px;
   margin-left: 0.843rem;
+  -webkit-appearance: none;
   background-color: var(--ayp-orange);
 }
 
-.audio__voice-controller {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  height: 0.625rem;
-  width: 0.625rem;
+.audio__voice-progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 1rem;
+  height: 1rem;
   border-radius: 100%;
   background-color: var(--ayp-orange);
-  cursor: pointer;
+}
+
+.audio__voice-progress::-ms-track {
+  background-color: var(--ayp-gray-light-3);
+  border-color: transparent;
+  color: transparent;
+}
+
+.audio__voice-progress:focus {
+  background-color: var(--ayp-orange);
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
 
 .audio__cover {
@@ -1766,6 +1865,18 @@ button.swiper-pagination-bullet {
   text-transform: capitalize;
 }
 
+@media (max-width: 1200px) {
+  .audio__voice {
+    width: 11%;
+  }
+}
+
+@media (max-width: 1080px) {
+  .audio {
+    font-size: clamp(12px, 1rem, 1rem);
+  }
+}
+
 @media (max-width: 667px) {
   .audio__left-btn,
   .audio__right-btn {
@@ -1789,11 +1900,30 @@ button.swiper-pagination-bullet {
     display: block;
     padding-top: 100%;
   }
+  .audio__player {
+    width: unset;
+  }
   .audio__cover {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
             order: 1;
-    margin-right: 1.785em;
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .audio__cover-song {
+    font-size: 0.8em;
+    max-width: 9rem;
+    overflow: hidden;
+  }
+  .audio__cover-singer {
+    max-width: 9rem;
+    overflow: hidden;
   }
   .audio__cover-img {
     display: none;
@@ -1802,35 +1932,51 @@ button.swiper-pagination-bullet {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
-    margin: 0 1.714em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
   }
-  .audio__play-btn {
-    margin: 0 0.928em;
-  }
-  .audio__player {
+  .audio__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
             order: 3;
   }
-  .audio__line {
+  .audio__play-btn {
+    margin: 0 0.928em;
+  }
+  .audio__progress {
     display: none;
   }
   .audio__time-total {
     display: none;
   }
-  .audio__time-left {
-    margin-right: 2.264em;
+  .audio__time-current {
+    margin-right: 1.2em;
   }
   .audio__voice {
     -webkit-box-ordinal-group: 5;
         -ms-flex-order: 4;
             order: 4;
-    margin-left: 1.521em;
+    width: auto;
+    -webkit-box-flex: unset;
+        -ms-flex-positive: unset;
+            flex-grow: unset;
   }
-  .audio__voice-line {
+  .audio__voice-progress {
     display: none;
   }
 }
@@ -1855,7 +2001,7 @@ button.swiper-pagination-bullet {
   display: block;
   width: 100%;
   margin: 0 auto;
-  padding: 0.857em 2.142em 0.857em 1.142em;
+  padding: 0.857em 3.2em 0.857em 1.142em;
   background-color: var(--ayp-gray);
   border: none;
   outline: none;
@@ -1974,7 +2120,8 @@ button.swiper-pagination-bullet {
 
 .shows__pagination-container {
   margin-top: 3.125rem;
-  margin-left: 0;
+  margin-right: auto;
+  margin-left: auto;
   width: 74.68%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2413,6 +2560,10 @@ button.swiper-pagination-bullet {
   }
 }
 
+.network {
+  margin-bottom: 7.562rem;
+}
+
 .network-title-container {
   width: 74.68%;
   display: -webkit-box;
@@ -2435,18 +2586,29 @@ button.swiper-pagination-bullet {
 
 .network-block.--twitter,
 .network-block.--facebook {
+  position: relative;
   border-radius: 20px;
   border: 5px solid #F1F1F1;
+  height: 406px;
   width: 48.5%;
 }
 
 .network-block.--twitter {
-  height: 406px;
   overflow-y: auto;
 }
 
+.network-block.--facebook {
+  overflow: hidden;
+}
+
 .fb-page {
-  border-radius: 20px !important;
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .network-blocks-container {
@@ -2469,6 +2631,36 @@ button.swiper-pagination-bullet {
   height: 100%;
   border-radius: 20px;
   border: 5px solid #F1F1F1;
+}
+
+.fb-img {
+  width: 100%;
+  height: 100%;
+}
+
+.fb-img img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 900px) {
+  .network-blocks-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .network-title-container {
+    width: 100%;
+  }
+  .network-block.--facebook,
+  .network-block.--twitter {
+    width: 100%;
+  }
+  .network-block.--twitter {
+    margin-bottom: 2rem;
+  }
 }
 
 .footer {
@@ -2606,9 +2798,6 @@ button.swiper-pagination-bullet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 1.125em 0 1.125em;
   background-color: var(--ayp-blue-dark);
   border-top: 1px solid #0B274E;
@@ -2617,11 +2806,16 @@ button.swiper-pagination-bullet {
 }
 
 .sub-footer__item {
+  width: 100%;
   color: var(--ayp-white);
 }
 
 .sub-footer__item:nth-child(2) {
-  margin: 0 1.375rem;
+  text-align: center;
+}
+
+.sub-footer__item:nth-child(3) {
+  padding-left: 13.812rem;
 }
 
 @media (max-width: 1200px) {
@@ -2662,15 +2856,18 @@ button.swiper-pagination-bullet {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .sub-footer__item:first-child {
     display: none;
   }
+  .sub-footer__item {
+    text-align: center;
+  }
   .sub-footer__item:nth-child(2) {
     margin-bottom: 1em;
+  }
+  .sub-footer__item:nth-child(3) {
+    padding-left: 0;
   }
 }
 
@@ -2720,6 +2917,7 @@ button.swiper-pagination-bullet {
         -ms-flex-order: 1;
             order: 1;
     margin-bottom: 1.5rem;
+    margin-left: 0;
   }
 }
 
@@ -3464,6 +3662,11 @@ button.swiper-pagination-bullet {
   font-size: 1rem;
 }
 
+.vip__reg-row .contact__form-captcha {
+  margin-top: 0;
+  width: 50.793%;
+}
+
 .vip__reg-row.vip__radio-row {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
@@ -3522,6 +3725,16 @@ button.swiper-pagination-bullet {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.vip__reg-label-text.vip__reg-label-text_multi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .vip__reg-row.vip__reg-row_reg {
@@ -3979,8 +4192,20 @@ button.swiper-pagination-bullet {
 }
 
 .contact__form-captcha {
+  position: relative;
   margin: -2rem auto 0.95rem;
-  display: none;
+  width: 23.679%;
+}
+
+.contact__form-captcha::before {
+  content: '';
+  display: block;
+  padding-top: 31.248%;
+}
+
+.contact__form-captcha img {
+  width: 100%;
+  height: 100%;
 }
 
 .contact__form-btn {
@@ -4036,9 +4261,12 @@ button.swiper-pagination-bullet {
   .contact__label-radio_in:first-child {
     margin-left: 0;
   }
+  .contact__form-captcha {
+    margin-top: 1rem;
+  }
 }
 
-@media (max-width: 676px) {
+@media (max-width: 667px) {
   .contact__form-container {
     width: 90%;
   }

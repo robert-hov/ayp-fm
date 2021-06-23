@@ -121,6 +121,11 @@
     font-size: 1rem;
 }
 
+.vip__reg-row .contact__form-captcha {
+    margin-top: 0;
+    width: 50.793%;
+}
+
 .vip__reg-row.vip__radio-row {
     justify-content: flex-start;
 }
@@ -169,6 +174,11 @@
     font-size: 1.062rem;
     line-height: 1.588em;
     align-items: center;
+}
+
+.vip__reg-label-text.vip__reg-label-text_multi {
+    display: flex;
+    flex-direction: column;
 }
 
 .vip__reg-row.vip__reg-row_reg {

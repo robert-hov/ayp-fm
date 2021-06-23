@@ -18,5 +18,8 @@
   "homepage": "https://github.com/robert-hov/ayp-fm#readme",
   "devDependencies": {
     "webpack": "^5.38.1"
+  },
+  "dependencies": {
+    "amplitudejs": "^5.3.2"
   }
 }

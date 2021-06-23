@@ -1,5 +1,5 @@
 .audio {
-    font-size: 1rem;
+    font-size: clamp(14px, 1rem, 1rem);
     position: fixed;
     top: 100%;
     left: 0;
@@ -60,14 +60,18 @@
 .audio__player {
     display: flex;
     align-items: center;
+    width: 79.714%;
+    flex-shrink: 0;
 }
 
 .audio__time {
     font-size: 0.875em;
     line-height: 1.571em;
+    width: 2.542rem;
+    flex-shrink: 0;
 }
 
-.audio__time-left {
+.audio__time-current {
     color: var(--ayp-orange);
 }
 
@@ -75,41 +79,82 @@
     color: var(--ayp-gray-2);
 }
 
-.audio__line {
-    position: relative;
+// .audio__line {
+//     position: relative;
 
-    width: 30.75rem;
-    height: 2px;
-    margin: 0 0.625rem;
+    
 
-    background-color: var(--ayp-orange);
+//     background-color: var(--ayp-gray-light-3);
+// }
+
+.audio__right {
+    display: flex;
+
+    width: 37.239%;
 }
 
-.audio__line-controller {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+.audio__progress {    
+    display: block;
+    position: relative;
+    z-index: 2;
+    flex-grow: 1;
+    height: 2px;
+    margin: 0 0.625rem;
+    background-color: var(--ayp-orange);
+    -webkit-appearance: none;
+}
 
-    height: 0.625rem;
-    width: 0.625rem;
+.audio__progress::-webkit-slider-thumb {  
+    -webkit-appearance: none; 
+    width: 1rem;
+    height: 1rem;
     border-radius: 100%;
-
     background-color: var(--ayp-orange);
     cursor: pointer;
 }
 
+.audio__progress::-ms-track {
+    // -webkit-appearance: none; 
+    background-color: var(--ayp-gray-light-3);
+    border-color: transparent;
+    color: transparent;
+}
+
+.audio__progress:focus {
+    background-color: var(--ayp-orange);
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+// .audio__progress::after {    
+//     content: '';
+//     position: absolute;
+//     top: 50%;
+//     right: 0;
+//     transform: translateY(-50%);
+
+//     height: 0.625rem;
+//     width: 0.625rem;
+//     border-radius: 100%;
+
+//     background-color: var(--ayp-orange);
+//     cursor: pointer;
+// }
+
 .audio__voice {
     display: flex;
     align-items: center;
-    margin-left: 2.675rem;
-    
+    margin-left: 3%;
+    flex-grow: 1;
 }
 
 .audio__voice-icon {
     position: relative;
     width: 1.187em;
+    flex-shrink: 0;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
 }
 
 .audio__voice-icon::before {
@@ -119,31 +164,53 @@
 }
 
 .audio__voice-icon svg {
-    fill: var(--ayp-gray-2);
+    fill: var(--ayp-orange);
 }
 
-.audio__voice-line {
+.audio__voice-progress {
     position: relative;
-    width: 4.375rem;
+    display: block;
+    width: 100%;
     height: 2px;
     margin-left: 0.843rem;
 
+    -webkit-appearance: none;
     background-color: var(--ayp-orange);
 }
 
-.audio__voice-controller {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-
-    height: 0.625rem;
-    width: 0.625rem;
+.audio__voice-progress::-webkit-slider-thumb {  
+    -webkit-appearance: none; 
+    width: 1rem;
+    height: 1rem;
     border-radius: 100%;
-
     background-color: var(--ayp-orange);
-    cursor: pointer;
 }
+
+.audio__voice-progress::-ms-track {
+    // -webkit-appearance: none; 
+    background-color: var(--ayp-gray-light-3);
+    border-color: transparent;
+    color: transparent;
+}
+
+.audio__voice-progress:focus {
+    background-color: var(--ayp-orange);
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+// .audio__voice-controller {
+//     position: absolute;
+//     top: 50%;
+//     left: 0;
+//     transform: translateY(-50%);
+
+//     height: 0.625rem;
+//     width: 0.625rem;
+//     border-radius: 100%;
+
+//     background-color: var(--ayp-orange);
+//     cursor: pointer;
+// }
 
 .audio__cover {
     display: flex;
@@ -187,6 +254,18 @@
     text-transform: capitalize;
 }
 
+@media (max-width:1200px) {
+    .audio__voice {
+        width: 11%;
+    }
+}
+
+@media (max-width: 1080px) {
+    .audio {
+        font-size: clamp(12px, 1rem, 1rem);
+    }
+}
+
 @media (max-width: 667px) {
     .audio__left-btn,
     .audio__right-btn {
@@ -194,52 +273,74 @@
         background-color: transparent;
         border: none;
     }
-
+    
     .audio__left-btn svg,
     .audio__right-btn svg {
         fill: var(--ayp-orange);
         stroke: var(--ayp-orange);
     }
-
-
+    
+    
     .audio__left-btn,
     .audio__right-btn {
         position: relative;
         width: 1.642em;
     }
-
+    
     .audio__left-btn::before,
     .audio__right-btn::before {
         content: '';
         display: block;
         padding-top: 100%;
     }
-    
 
+    .audio__player {
+        width: unset;
+    }
+    
     .audio__cover {
         order: 1;
-        margin-right: 1.785em;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 
+    .audio__cover-song {
+        font-size: 0.8em;
+        max-width: 9rem;
+        overflow: hidden;
+    }
+
+    .audio__cover-singer {
+        max-width: 9rem;
+        overflow: hidden;
+    }
+    
     .audio__cover-img {
         display: none;
     }
-
+    
     .audio__buttons-container {
         order: 2;
-        margin: 0 1.714em;
         align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .audio__right {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        order: 3;
     }
 
     .audio__play-btn {
         margin: 0 0.928em;
     }
 
-    .audio__player {
-        order: 3;
-    } 
-
-    .audio__line {
+    .audio__progress {
         display: none;
     }
 
@@ -247,16 +348,17 @@
         display: none;
     }
 
-    .audio__time-left {
-        margin-right: 2.264em;
+    .audio__time-current {
+        margin-right: 1.2em;
     }
 
     .audio__voice {
         order: 4;
-        margin-left: 1.521em;
+        width: auto;
+        flex-grow: unset;
     }
 
-    .audio__voice-line {
+    .audio__voice-progress {
         display: none;
     }
 }

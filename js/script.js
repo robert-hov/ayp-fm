@@ -20,58 +20,17 @@ btn.addEventListener('click', function () {
 //sub footer 
 
 {
-    const body = document.querySelector('body')
     const subFooter = document.querySelector('.sub-footer');
     const audio = document.querySelector('.audio');
 
-    body.onload = function() {
+    window.addEventListener("load", function() {
         let audioHeight = audio.offsetHeight;
         subFooter.style.marginBottom = audioHeight + "px";
-    }
+    });
 
-    body.onresize = function() {
+    window.onresize = function() {
         let audioHeight = audio.offsetHeight;
         subFooter.style.marginBottom = audioHeight + "px";
-    }
-}
-
-//audio
-
-{
-    const playBnt = document.querySelector('.audio__play-btn');
-    const audio = document.querySelector('.audio__audio');
-    const audioTime = document.querySelector('.audio__time-left');
-    const audioVoice = document.querySelector('.audio__voice-icon');
-
-
-    if (playBnt && audio) {
-        playBnt.addEventListener('click', function () {
-            const playBtnSvg = playBnt.querySelector('use');
-            if (audio.paused) {
-                audio.play();
-                playBtnSvg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#pause-btn');
-                playBtnSvg.style.fill="var(--ayp-gray-2)";
-            } else {
-                audio.pause();
-                playBtnSvg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#play-btn')
-                playBtnSvg.style.fill="var(--ayp-orange)";
-            }
-        })
-    }
-
-    if (audio && audioVoice) {
-        const audioVoiceSvg = audioVoice.querySelector('use');
-        audioVoice.addEventListener('click', function(){
-            if(audio.muted == false) {
-                audio.muted = true;
-                audioVoiceSvg.style.fill="var(--ayp-gray-2)";
-                audioVoiceSvg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume-mute')
-            } else {
-                audio.muted = false;
-                audioVoiceSvg.style.fill="var(--ayp-orange)";
-                audioVoiceSvg.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume')
-            }
-        })
     }
 }
 
@@ -102,3 +61,154 @@ btn.addEventListener('click', function () {
         // console.log(plusBtn)
     }
 }
+
+{
+    var songs = ["Hayastan jan.mp3"];
+
+    const playBnt = document.querySelector('.audio__play-btn');
+    const muteBtn = document.querySelector('.audio__voice-icon');
+    const muteBtnUse = muteBtn.querySelector('use');
+    const playBntUse = playBnt.querySelector('use');
+    var songTitle = document.querySelector('.audio__cover-song');
+    var songSlider = document.querySelector('.audio__progress');
+    var currentTime = document.querySelector('.audio__time-current');
+    var duration = document.querySelector('.audio__time-total');
+    var volumeSlider = document.querySelector('.audio__voice-progress');
+    // var nextSongTitle = document.getElementById('nextSongTitle');
+
+    var song = new Audio();
+    var currentSong = 0;
+
+    window.onload = loadSong;
+
+    function loadSong () {
+        song.src = "music/" + songs[currentSong];
+        songTitle.textContent = (currentSong + 1) + ". " + songs[currentSong];
+        song.playbackRate = 1;
+        song.volume = volumeSlider.value;
+        setTimeout(showDuration, 1000);
+    }
+
+    setInterval(updateSongSlider, 1000);
+
+    function updateSongSlider () {
+        var c = Math.round(song.currentTime);
+        songSlider.value = c;
+        currentTime.textContent = convertTime(c);
+        if(song.ended){
+            next();
+        }
+    }
+
+    function convertTime (secs) {
+        var min = Math.floor(secs/60);
+        var sec = secs % 60;
+        min = (min < 10) ? "0" + min : min;
+        sec = (sec < 10) ? "0" + sec : sec;
+        return (min + ":" + sec);
+    }
+
+    function showDuration () {
+        var d = Math.floor(song.duration);
+        songSlider.setAttribute("max", d);
+        duration.textContent = convertTime(d);
+    }
+
+    function playOrPauseSong () {
+        song.playbackRate = 1;
+        if(song.paused){
+            song.play();
+            playBntUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#pause-btn');
+            playBntUse.style.fill = "var(--ayp-gray-2)";
+        }else{
+            song.pause();
+            playBntUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#play-btn');
+            playBntUse.style.fill = "var(--ayp-orange)";
+        }
+    }
+
+    function next(){
+        currentSong = currentSong + 1 % songs.length;
+        loadSong();
+    }
+
+    function previous () {
+        currentSong--;
+        currentSong = (currentSong < 0) ? songs.length - 1 : currentSong;
+        loadSong();
+    }
+
+    function seekSong () {
+        song.currentTime = songSlider.value;
+        currentTime.textContent = convertTime(song.currentTime);
+    }
+
+    function adjustVolume () {
+        song.volume = volumeSlider.value;
+        if (song.volume == 0) {
+            muteBtnUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume-mute');
+            muteBtnUse.style.fill = "var(--ayp-gray-2)"
+        } else {
+            muteBtnUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume');
+            muteBtnUse.style.fill = "var(--ayp-orange)"
+        }
+    }
+
+    function muteVolume () {
+        if (muteBtn.className == "audio__voice-icon" && song.volume != 0){
+            // volumeSlider.value = 0.5;
+            song.volume = 0;
+            muteBtn.classList.add('active');
+            muteBtnUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume-mute');
+            muteBtnUse.style.fill = "var(--ayp-gray-2)"
+        } else if (song.volume >= 0) {
+            song.volume = volumeSlider.value;
+            muteBtn.classList.remove('active');
+            muteBtnUse.setAttributeNS('http://www.w3.org/1999/xlink', 'href', '#volume');
+            muteBtnUse.style.fill = "var(--ayp-orange)"
+        }
+    }
+}
+
+(function(){
+
+    // Really basic check for the ios platform
+    // https://stackoverflow.com/questions/9038625/detect-if-device-is-ios
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+  
+    // Get the device pixel ratio
+    var ratio = window.devicePixelRatio || 1;
+  
+    // Define the users device screen dimensions
+    var screen = {
+      width : window.screen.width * ratio,
+      height : window.screen.height * ratio
+    };
+  
+    // iPhone X Detection
+    const iphoneX = document.querySelector('.nav__inner');
+
+    if (iOS && screen.width == 1125 && screen.height === 2436) {
+        iphoneX.classList.add('iphoneX');
+    } else {
+        iphoneX.classList.remove('iphoneX');
+    }
+
+    window.onresize = () => {
+        switch ( window.orientation) {
+
+            case 0:
+                iphoneX.style.paddingRight = "2rem";
+                iphoneX.style.paddingLeft = "2rem";
+            break;
+        
+            case 90:
+                iphoneX.style.paddingLeft = "4rem"
+            break;
+        
+            case -90:
+                iphoneX.style.paddingRight = "4rem"
+            break;
+        }
+    }     
+  })();
